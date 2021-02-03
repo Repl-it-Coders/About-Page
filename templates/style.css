@@ -1,0 +1,76 @@
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color) !important;
+}
+
+:root {
+    --bg-color: white;
+    --hover-color: rgb(162, 162, 162);
+    --nav-color: rgb(211, 211, 211);
+    --font-color: black;
+}
+
+[data-theme="dark"] {
+    --bg-color: #2a2a2a;
+    --hover-color: #111;
+    --nav-color: #333;
+    --font-color: white;
+}
+
+
+.dark-button {
+	position: -webkit-fixed;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	transition-duration: 0.5s;
+	border: none;
+	border-radius: 50%;
+	background-color: transparent;
+}
+
+.dark-image {
+	filter: invert(0);
+	background-color: transparent;
+	opacity: .4;
+	transition: opacity 0.5s;
+	width: 40px;
+	height: 40px;
+}
+
+.dark-image:hover {
+	opacity: .9;
+}
+
+.dark-mode .dark-image {
+	filter: invert(100%);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--nav-color);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: var(--hover-color);
+}
