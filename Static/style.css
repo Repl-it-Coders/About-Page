@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;900&family=Montserrat:wght@500&display=swap');
+
+html {
+  background-color: #000B14;
+  color: #FFFFFF;
+}
+
+html.forofor {
+  color: #EDAFB8;
+  background-color: #3DA5D9;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.full-center {
+  text-align: center;
+  /* Make horizontally center cause I don't know how */
+}
+
+.center {
+  text-align: center;
+}
+
+.lostheader {
+  font-family: 'Kanit', sans-serif;
+  font-size: 40px;
+}
+.losttext {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+}
+.lostlink {
+  text-decoration: none;
+  color: #5465FF
+}
+
+.lostlink:hover {
+  color: rgba(84, 101, 255, 0.5);
+  font-size: 30px;
+}

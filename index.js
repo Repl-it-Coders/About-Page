@@ -4,53 +4,40 @@
 // IT WILL AUTOMATICALLY BE SET AS THE FAVICON
 // GOTO ALL OF THE HTML DOCUMENTS IN THE 'TEMPLATES' FOLDER AND EDIT THE TEXT.
 // TELL PEOPLE ABOUT YOUR SITE!
-
+console.clear();
 const express = require('express');
-
 const app = express();
 
-var options = { 
-  root: __dirname+'/templates/'
-}; 
-
-function sendFile(filename, res) {
-  return res.sendFile(filename, options)
-}
-
-function sendFileSpecial(filename, res, int) {
-  res.status(int)
-  return res.sendFile(filename, options)
-}
+app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
+app.use(express.static('Static'));
 
 app.get('/', (req, res) => {
-  sendFile('index.html', res)
+  res.render('index');
+  console.log("You have entered the INDEX, dun dun duuuuuuuhn")
 });
-
-app.get('/about', (req, res) => {
-  sendFile('about.html', res)
+app.get('/ch1ck3n', (req, res) => {
+  res.render('ch1ck3n');
+  console.log("Entering, the one, the only, ch1ck3n!")
 });
-
-app.get('/style.css', (req, res) => {
-  sendFile('style.css', res)
+app.get('/dark', (req, res) => {
+  res.render('dark');
+  console.log("You have gone to darkdarcool's page aahahaha")
 });
-
-app.get('/script.js', (req, res) => {
-  sendFile('script.js', res)
+app.get('/codingredpanda', (req, res) => {
+  res.render('codingredpanda');
+  console.log("Entering, the one, the only, CodingRedpanda!")
 });
-
-app.get('/imgs/Dark_Mode.svg', (req, res) => {
-  sendFile('imgs/Dark_Mode.svg', res)
+app.get('/dark.style', (req, res) => {
+  res.sendFile('Static/Darkdarcool.css/');
+  console.log("You have entered the INDEX, dun dun duuuuuuuhn")
 });
+app.get("*", (req, res) => {
+  res.render("404");
+  console.log("Hi, you reached the wrong number. Please try again IMMEDIATELY")
+})
+app.use((req, res, next) => {res.status(404).render('404')});
 
-app.get('/favicon.png', (req, res) => {
-  sendFile('favicon.png', res)
-});
-
-
-app.get('*', (req, res) => {
-  sendFileSpecial('404.html', res, 404);
-});
-
-app.listen(3000, () => {
-  console.log('server started');
+app.listen(8080, () => {
+  console.log('Page iiiis woooorking');
 });
