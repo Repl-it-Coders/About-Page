@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "About-Page",
   "version": "1.0.0",
   "description": "This is our about page. If you see any spelling mistakes feel free to point them out as an issue or create a pr. If you want to join the organisation and get your own page here, please create an issue on the repo. There are some stuff you should know about before joining. I will tell you those things when you create the issue. Also please try to have 1 month prior experience before trying to join the org as I will only then know that you have been using repl.it for some time and you are not just a person trying to delete everything and mess with using",
@@ -22,4 +23,19 @@
     "url": "https://github.com/Repl-it-Coders/About-Page/issues"
   },
   "homepage": "https://github.com/Repl-it-Coders/About-Page#readme"
+=======
+  "name": "Profiles",
+  "description": "A collection of all the members of the Repl-it Coders Organization.",
+  "author": "Darkdarcool <random@email.woo>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Repl-it-Coders/About-Page"
+  },
+  "main": "index.js",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+>>>>>>> origin/main
 }
