@@ -9,5 +9,5 @@ Editing : Yes
 Posted : No
 Started : Maybe
 Page Contents : Almost Nothing
-Portfolios : None
+Portfolios : some
 About Page : Not Done
