@@ -1,8 +1,13 @@
 {
   "name": "About-Page",
   "version": "1.0.0",
-  "description": "This is a profile for all of the repl.it coders!",
+  "description": "This is our about page. If you see any spelling mistakes feel free to point them out as an issue or create a pr. If you want to join the organisation and get your own page here, please create an issue on the repo. There are some stuff you should know about before joining. I will tell you those things when you create the issue. Also please try to have 1 month prior experience before trying to join the org as I will only then know that you have been using repl.it for some time and you are not just a person trying to delete everything and mess with using",
   "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/Repl-it-Coders/About-Page/issues"
   },
-  "homepage": "https://github.com/Repl-it-Coders/About-Page#readme",
-  "dependencies": {
-    "ejs": "^3.1.5",
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/Repl-it-Coders/About-Page#readme"
 }
