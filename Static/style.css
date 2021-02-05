@@ -35,6 +35,10 @@ html.codemonkey51 {
 	background-color: black;
 	color: white;
 }
+html.head {
+  font-family: cursive;
+  background-image: 'head.png';
+}
 
 html.codingredpanda {
   color: rgba(200, 255, 0, 0.5);
@@ -109,7 +113,7 @@ html.colepete ul.b {
   list-style-type: square;
 }
 html.colepete h2 {
-  font-size: 25px;
+  font-size: 30px;
   display: inline-block;
 }
 html.colepete h4 {
@@ -332,5 +336,5 @@ html.darkdarcool a[href*="//twitter.com"]::before {
 }
 #navbar a:hover {
   color: rgba(10, 90, 240, 0.695);
-  font-size: 26px;
+  /*font-size: 26px;*/
 }

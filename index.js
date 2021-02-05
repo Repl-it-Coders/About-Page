@@ -7,12 +7,11 @@ app.use(express.static('Static'));
 
 app.get('/', (req, res) => {
   res.render('index');
-
-  console.log("You have entered the INDEX, dun dun duuuuuuuhn");
+  // Just decided to change this:
+  console.log("[DEBUUG CHANTER] WE ON YEM BOUT PAGE BOI");
 });
 app.get('/signup', (req, res) => {
   res.render('signup');
- 
   console.log("DIS DEM SIGNUP PAGE BOI");
 });
 // Don't get rid of anything below!
@@ -39,14 +38,29 @@ app.get('/dark', (req, res) => {
 });
 
 app.get('/codingredpanda', (req, res) => {
- 
   res.render('codingredpanda');
-  console.log("Entering, the one, the only, CodingRedpanda!");
+  console.log("a redpanda who may or may not be a hacker...");
+});
+
+app.get('/JBloves27', (req, res) => {
+  res.render('JBLOVES');
+  console.log('Entering glitch territory!')
 });
 app.get('/BD103', (req, res) => {
  
   res.render('bd');
   console.log("Yay someone actually is looking at BD103's page! 🥳")
+});
+app.get("/head", (req, res) => {
+  res.render("head");
+  console.log("Entering a floating head's territory")
+});
+app.get("/EPIC", (req, res) => {
+  res.render("epicraisin");
+  console.log("SOUR!!! RASINSS!!");
+});
+app.get('/programmeruser', (req, res) => {
+	res.render('programmeruser');
 });
 
 app.get("*", (req, res) => {
@@ -101,46 +115,8 @@ app.get("/l", (req, res) => {
 app.get("/m", (req, res) => {
   console.log("m");
 });
-app.get("n", (req, res) => {
+app.get("/n", (req, res) => {
   console.log("n");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});
-app.get("", (req, res) => {
-  console.log("");
-});app.get("", (req, res) => {
-  console.log("");
 });
 
 app.use((req, res, next) => {res.status(404).render('404')});
