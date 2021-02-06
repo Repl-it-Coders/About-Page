@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About EpicRaisin</title>
+</head>
+<body>
+	<div id="typing">
+		<h1>EpicRaisin</h1>¶
+		<h2>The world's most awesomest coder ever</h2>¶
+		<p>EpicRaisin is the world's most amazing coder who ever existed. Just like how he created the script that is making this thing right now in real time.</p>¶
+		<h3>What does he code?</h3>¶
+		<p>EpicRaisin likes to code Discord bots and websites. He is fluent in Python, JS, and HTML/CSS. He is currently learning how to use C# and the rest of the C family.</p>¶
+		<h3>What is his best repl?</h3>¶
+		EpicRaisin's most popular repl is <a href="https://3d-but-its-fake.epicraisin.repl.co/">3d but its actually fake</a>, a psuedo-3D renderer, with over 160 upvotes. (totally not a advertisement)
+		<h3>Can this about page get some color?</h3>¶
+		Sure. Doing that is easy. I just need to type in a style element.¶
+		<style>¶
+			h1, h2, h3{¶
+				color: #ffff00;¶
+			}¶
+			#preview{¶
+				background: #b200ff!important;¶
+				color: #ffffff;¶
+			}¶
+		</style>¶
+		How's this?¶
+		<h3>Contact</h3>¶
+		You can contact EpicRaisin by DMing him on Discord, EpicRaisin#1626. You can also join his Discord dev server, <a href="https://discord.gg/tUkZn5CpKY">Raisin Dev</a>.¶
+    <h2>Get Me OUTTA HERE!!!</h2>¶
+    <p>You can get outta here by pressing <a href="https://about-page.whippingdot.repl.co/">Tis</a> link. BTW Tis part was created boi WHIPPINGDOT!</p>¶
+	</div>
+	<div id="preview"></div>
+	<style>
+		body{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			font-family: sans-serif;
+		}
+		#preview{
+			position: absolute;
+			right: 8px;
+			top: 8px;
+			width: calc(100% / 2 - 24px);
+			height: calc(100% - 24px);
+			overflow-y: scroll;
+			background: #E5E5E5;
+			padding: 5px;
+		}
+		#typing{
+			position: absolute;
+			left: 8px;
+			top: 8px;
+			width: calc(100% / 2 - 24px);
+			height: calc(100% - 24px);
+			overflow-y: scroll;
+			background: #1d2333;
+			color: white;
+			padding: 5px;
+		}
+	</style>
+	<script>
+var textIndex = 0
+var text = document.getElementById('typing').innerHTML
+document.getElementById('typing').innerHTML = ''
+
+function typewriter(text)
+{
+	document.getElementById('preview').scrollTop = document.getElementById('preview').scrollHeight
+	document.getElementById('typing').scrollTop = document.getElementById('typing').scrollHeight
+	document.getElementById('typing').innerHTML += text[textIndex]
+	document.getElementById('preview').innerHTML = document.getElementById('typing').innerHTML.replace(/<br>/g,'').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/¶/g,'')
+	document.getElementById('typing').innerHTML = document.getElementById('typing').innerHTML.replace('¶','<br>')
+	textIndex++
+	if(textIndex >= text.length){
+		return
+	}
+	setTimeout(function(){typewriter(text)}, 25)
+}
+typewriter(text)
+	</script>
+</body>
+</html>
