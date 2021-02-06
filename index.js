@@ -21,12 +21,13 @@ app.get('/signup', (req, res) => {
 
 app.get("/:user", (req, res) => {
 	fs.exists(`views/${req.params.user}.html`, (exists) => {
-		if (exists)
+		if (exists) {
 			res.render(req.params.user);
       console.log("Serving user: " + req.params.user);
-		else
+		} else {
 			res.status(404).render("404");
-      console.log("404 Error, Page Not Found")
+      console.log("404 Error, Page Not Found");
+    }
 	});
 });
 
