@@ -320,7 +320,7 @@ html.darkdarcool a[href*="//twitter.com"]::before {
 #navbar li {
 	list-style-type: none;
 	display: inline;
-	float: left;
+  /* float: left; */
 	padding-right: 20px;
 }
 
