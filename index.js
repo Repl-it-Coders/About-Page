@@ -20,15 +20,20 @@ app.get('/signup', (req, res) => {
 // Don't get rid of anything below! (Except the inefficient use of all those request handlers)
 
 app.get("/:user", (req, res) => {
-	fs.exists(`views/${req.params.user}.html`, (exists) => {
-		if (exists) {
-			res.render(req.params.user);
-      console.log("Serving user: " + req.params.user);
-		} else {
-			res.status(404).render("404");
+  fs.exists(`views/${req.params.user}.html`, (exists) => {
+    if (exists) {
+      res.render(req.params.user);
+      if (req.params.user == "ch1ck3n") {
+        console.log("Yeet someone is actually visiting ch1ck3n's page")
+      }
+      else {
+        console.log("Serving user: " + req.params.user);
+      }
+    } else {
+      res.status(404).render("404");
       console.log("404 Error, Page Not Found");
     }
-	});
+  });
 });
 
 /*app.get('/ch1ck3n', (req, res) => {
