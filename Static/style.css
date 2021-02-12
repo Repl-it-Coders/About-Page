@@ -82,7 +82,7 @@ html.home h1 a, html.signup h1 a {
   font-family: 'Permanent Marker', cursive;
 }
 html.home h1 a:hover, html.signup h1 a:hover {
-  color: #575fff;
+  color: #3a43f5;
 }
 html.home a, html.signup a {
   color: #E54F6D;
@@ -135,6 +135,7 @@ html.colepete a:hover {
   color: rgba(181, 255, 225, 0.5);
 }
 
+
 /* Sign Up Page */
 html.signup button {
   padding: 10px;
@@ -151,6 +152,7 @@ html.signup input {
   border-radius: 5px;
 }
 html.signup label {
+  cursor: text;
   color: #5C96AD;
 }
 

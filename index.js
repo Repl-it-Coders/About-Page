@@ -17,24 +17,43 @@ app.get('/signup', (req, res) => {
   console.log("Serving Signup Page");
 });
 
-// Don't get rid of anything below! (Except the inefficient use of all those request handlers)
+// Don't get rid of the efficient request handlers:
 
-app.get("/:user", (req, res) => {
-  fs.exists(`views/${req.params.user}.html`, (exists) => {
-    if (exists) {
-      res.render(req.params.user);
-      if (req.params.user == "ch1ck3n") {
-        console.log("Yeet someone is actually visiting ch1ck3n's page")
-      }
-      else {
-        console.log("Serving user: " + req.params.user);
-      }
-    } else {
-      res.status(404).render("404");
-      console.log("404 Error, Page Not Found");
-    }
-  });
-});
+// app.get("/:user", (req, res) => {
+//   fs.exists(`views/${req.params.user}.html`, (exists) => {
+//     if (exists) {
+//       res.render(req.params.user);
+//       if (req.params.user == "ch1ck3n") {
+//         console.log("Yeet someone is actually visiting ch1ck3n's page")
+//       } else if (req.params.user.toLowerCase() == "codemonkey51") {
+//       	console.log("Does anyone even remember Codemonkey51, still going there anyways");
+//       } else if (req.params.user == "darkdarcool") {
+//         console.log("Wow, what a lame-o. Someone is in darkdarcool's page!")
+//       }
+//       else if (req.params.user == "codingredpanda") {
+//         console.log("ooooh, u want to see the amazing CodingRedpanda?")
+//       }
+//       else if (req.params.user == "jbloves27") {
+//         console.log("I don't know what JB was gonna write so ummm hoi ~~ Whippingdot")//hrmm...
+// 	  }
+// 	  else if (req.params.user == "isaiah08") {
+//         console.log("Wait, someone is ACTUALLY looking the isaiah08 page???")
+//       }	  
+// 	else {
+//         console.log("Serving user: " + req.params.user);
+//       }
+//     } else {
+//       res.status(404).render("404");
+//       console.log("404 Error, Page Not Found");
+//     }
+//   });
+// });
+
+
+app.get("/:user",(o,e)=>{fs.exists(`views/${o.params.user}.html`,a=>{a?(e.render(o.params.user),"ch1ck3n"==o.params.user?console.log("Yeet someone is actually visiting ch1ck3n's page"):"codemonkey51"==o.params.user.toLowerCase()?console.log("Does anyone even remember Codemonkey51, still going there anyways"):"darkdarcool"==o.params.user?console.log("Wow, what a lame-o. Someone is in darkdarcool's page!"):"codingredpanda"==o.params.user?console.log("ooooh, u want to see the amazing CodingRedpanda?"):"jbloves27"==o.params.user?console.log("I don't know what JB was gonna write so ummm hoi ~~ Whippingdot"):"isaiah08"==o.params.user?console.log("Wait, someone is ACTUALLY looking the isaiah08 page???"):console.log("Serving user: "+o.params.user)):(e.status(404).render("404"),console.log("404 Error, Page Not Found"))})});
+
+
+// Keep the below commented:
 
 /*app.get('/ch1ck3n', (req, res) => {
 

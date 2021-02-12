@@ -10,10 +10,9 @@ The Next project is underway. It will be a project just for ourselves. We will s
 
 ### Things to do
 
-- [ ] Make the sign up page send to a file/db
+- [ ] Make the sign up page send to a file/email
 - [ ] Add a good note for what this website is about. Underneath the about message write a good note for what this website is about
 - [ ] Add content to secret page -- Right now make the routing work
-- [ ] Add content to 404 page. Make it nice ~~and toasty~~ and good looking so people like it and understand that they reached the wrong page
 - [ ] Add the pages for **_Every_** single person on the organisation
 - [ ] Do the routing for all the pages first
 - [ ] Add the contents. If org member has their own about page just ask them to add a a navbar or you add a navbar to their page which fits in with the style while also having the same thing the main navbar has. This means add their same about page but with an extra navbar that has the same things this website has.
@@ -22,7 +21,7 @@ The Next project is underway. It will be a project just for ourselves. We will s
 - [ ] Share again with more changes which we will think of later
 
 ### Finished
-
+- [x] Add content to 404 page. Make it nice ~~and toasty~~ and good looking so people like it and understand that they reached the wrong page
 - [X] Add good note for about. This means write the 'about' of why this organisation is there
 - [X] Tsunami forgot how to favicon load it up
 - [X] Add background color
