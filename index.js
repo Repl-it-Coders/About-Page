@@ -104,8 +104,8 @@ app.get('/programmeruser', (req, res) => {
 
 // app.use((req, res, next) => {res.status(404).send("Error")});
 
-// app.use((req, res, next) => {res.status(404).render('404')});
-
+// app.use((req, res, next) => {res.status(404).f8mrender('404')});
+// HAH I FIXED A BUG - elipie
 app.listen(8000, () => {
   console.log("Server running.");
 });
