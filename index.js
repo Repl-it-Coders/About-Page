@@ -1,20 +1,20 @@
 const fs = require("fs");
 
-const express = require('express');
+const express = require("express");
 const app = express();
-const visits = 0
-app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
-app.use(express.static('Static'));
+const visits = 0;
+app.set("view engine", "html");
+app.engine("html", require("ejs").renderFile);
+app.use(express.static("Static"));
 
-app.get('/', (req, res) => {
-  res.render('index');
-  // Just decided to change this:
-  console.log("Serving Home Page");
+app.get("/", (req, res) => {
+	res.render("index");
+	// Just decided to change this:
+	console.log("Serving Home Page");
 });
-app.get('/signup', (req, res) => {
-  res.render('signup');
-  console.log("Serving Signup Page");
+app.get("/signup", (req, res) => {
+	res.render("signup");
+	console.log("Serving Signup Page");
 });
 
 // Don't get rid of the efficient request handlers:
@@ -38,7 +38,7 @@ app.get('/signup', (req, res) => {
 // 	  }
 // 	  else if (req.params.user == "isaiah08") {
 //         console.log("Wait, someone is ACTUALLY looking the isaiah08 page???")
-//       }	  
+//       }
 // 	else {
 //         console.log("Serving user: " + req.params.user);
 //       }
@@ -49,9 +49,32 @@ app.get('/signup', (req, res) => {
 //   });
 // });
 
-
-app.get("/:user",(o,e)=>{fs.exists(`views/${o.params.user}.html`,a=>{a?(e.render(o.params.user),"ch1ck3n"==o.params.user?console.log("Yeet someone is actually visiting ch1ck3n's page"):"codemonkey51"==o.params.user.toLowerCase()?console.log("Does anyone even remember Codemonkey51, still going there anyways"):"darkdarcool"==o.params.user?console.log("Wow, what a lame-o. Someone is in darkdarcool's page!"):"codingredpanda"==o.params.user?console.log("ooooh, u want to see the amazing CodingRedpanda?"):"jbloves27"==o.params.user?console.log("I don't know what JB was gonna write so ummm hoi ~~ Whippingdot"):"isaiah08"==o.params.user?console.log("Wait, someone is ACTUALLY looking the isaiah08 page???"):console.log("Serving user: "+o.params.user)):(e.status(404).render("404"),console.log("404 Error, Page Not Found"))})});
-
+app.get("/:user", (o, e) => {
+	fs.exists(`views/${o.params.user}.html`, (a) => {
+		a
+			? (e.render(o.params.user),
+			  "ch1ck3n" == o.params.user
+					? console.log("Yeet someone is actually visiting ch1ck3n's page")
+					: "codemonkey51" == o.params.user.toLowerCase()
+					? console.log(
+							"Does anyone even remember Codemonkey51, still going there anyways"
+					  )
+					: "darkdarcool" == o.params.user
+					? console.log("Wow, what a lame-o. Someone is in darkdarcool's page!")
+					: "codingredpanda" == o.params.user
+					? console.log("ooooh, u want to see the amazing CodingRedpanda?")
+					: "jbloves27" == o.params.user
+					? console.log(
+							"I don't know what JB was gonna write so ummm hoi ~~ Whippingdot"
+					  )
+					: "isaiah08" == o.params.user
+					? console.log(
+							"Wait, someone is ACTUALLY looking the isaiah08 page???"
+					  )
+					: console.log("Serving user: " + o.params.user))
+			: (e.status(404).render("404"), console.log("404 Error, Page Not Found"));
+	});
+});
 
 // Keep the below commented:
 
@@ -107,5 +130,5 @@ app.get('/programmeruser', (req, res) => {
 // app.use((req, res, next) => {res.status(404).f8mrender('404')});
 // HAH I FIXED A BUG - elipie
 app.listen(8000, () => {
-  console.log("Server running.");
+	console.log("Server running.");
 });

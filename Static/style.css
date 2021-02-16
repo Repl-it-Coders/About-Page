@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;900&family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;900&family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 
 /* 
 Font family choices:
@@ -19,99 +19,102 @@ font-family: 'Walter Turncoat', cursive;
 */
 /* HTML TAGS */
 html {
-  background-color: #000B14;
-  color: #FFFFFF;
-  font-family: 'Kanit', sans-serif;;
+	background-color: #000b14;
+	color: #ffffff;
+	font-family: "Kanit", sans-serif;
 }
 html.whip {
-  background-color: #3BCEAC;
-  font-family: 'Architects Daughter', cursive;
+	background-color: #3bceac;
+	font-family: "Architects Daughter", cursive;
 }
 html.forofor {
-  color: #EDAFB8;
-  background-color: rgb(0, 170, 255);
+	color: #edafb8;
+	background-color: rgb(0, 170, 255);
 }
 html.colepete {
-  background-color: black;
-  color: rgb(255, 255, 255);
-  font-family: 'Yusei Magic', sans-serif;
+	background-color: black;
+	color: rgb(255, 255, 255);
+	font-family: "Yusei Magic", sans-serif;
 }
 html.codemonkey51 {
-	font-family: 'Electrolize', sans-serif;
+	font-family: "Electrolize", sans-serif;
 	background-color: black;
 	color: white;
 }
 html.head {
-  font-family: cursive;
-  background-image: 'head.png';
+	font-family: cursive;
+	background-image: "head.png";
 }
 html.codingredpanda {
-  color: rgba(200, 255, 0, 0.5);
-  /* The below makes my website text unselectable, don't change it. */
-  -webkit-user-select: none;        
-  -moz-user-select: none; 
-  -ms-user-select: none; 
-  user-select: none; 
+	color: rgba(200, 255, 0, 0.5);
+	/* The below makes my website text un-selectable, don't change it. */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* GLOBAL */
 
-
 h1 {
-  font-size: 60px;
-  color: #B8D4E3;
+	font-size: 60px;
+	color: #b8d4e3;
 }
 
 h2 {
-  font-size: 50px;
-  color: #B8D4E3;
+	font-size: 50px;
+	color: #b8d4e3;
 }
 
 p {
-  color: #A0C2CF;
-  font-size: 20px;
+	color: #a0c2cf;
+	font-size: 20px;
 }
 
 .center {
-  text-align: center;
+	text-align: center;
 }
 
 .enlarge:hover {
-  font-size: 125%;
+	font-size: 125%;
 }
 
 /* HOME */
 
-html.home h1 a, html.signup h1 a {
-  color: #000dff;
-  font-family: 'Permanent Marker', cursive;
+html.home h1 a,
+html.signup h1 a {
+	color: #000dff;
+	font-family: "Permanent Marker", cursive;
 }
-html.home h1 a:hover, html.signup h1 a:hover {
-  color: #3a43f5;
+html.home h1 a:hover,
+html.signup h1 a:hover {
+	color: #3a43f5;
 }
-html.home a, html.signup a {
-  color: #E54F6D;
-  text-decoration: none;
+html.home a,
+html.signup a {
+	color: #e54f6d;
+	text-decoration: none;
 }
-html.home a:hover, html.signup a:hover{
-  color: rgba(229, 79, 109, 0.695);
+html.home a:hover,
+html.signup a:hover {
+	color: rgba(229, 79, 109, 0.695);
 }
 
 /* Whippingdot's Section */
 html.whip h1 {
-  font-family: 'Walter Turncoat', cursive;
-  font-size: 80px;
-  color: #EE4266;
+	font-family: "Walter Turncoat", cursive;
+	font-size: 80px;
+	color: #ee4266;
 }
 html.whip h2 {
-  font-family: 'Walter Turncoat', cursive;
-  font-size: 60px;
-  color: #EE4266;
+	font-family: "Walter Turncoat", cursive;
+	font-size: 60px;
+	color: #ee4266;
 }
 html.whip p {
-  color: #0EAD69;
-  font-size: 30px;
-  font-family: 'Architects Daughter', cursive;
+	color: #0ead69;
+	font-size: 30px;
+	font-family: "Architects Daughter", cursive;
 }
 
 /* Codemonkey51's Section */
@@ -122,221 +125,239 @@ html.codemonkey51 a {
 }
 
 html.codemonkey51 a:hover {
-  color: rgba(173, 216, 230, 0.695);
+	color: rgba(173, 216, 230, 0.695);
 }
 
 html.codemonkey51 a:visited {
 	color: #b19cd9;
 }
 
-/* ColePetes Section */
+/* ColePete's Section */
 
 html.colepete ul.b {
-  list-style-type: square;
+	list-style-type: square;
 }
 html.colepete h2 {
-  font-size: 30px;
-  display: inline-block;
+	font-size: 30px;
+	display: inline-block;
 }
 html.colepete h4 {
-  font-size: 20px;
-  display: inline-block
+	font-size: 20px;
+	display: inline-block;
 }
 html.colepete h3 {
-  font-size: 25px;
-  display: inline-block
+	font-size: 25px;
+	display: inline-block;
 }
 html.colepete h1 {
-  font-size: 40px;
-  display: inline-block
+	font-size: 40px;
+	display: inline-block;
 }
 html.colepete a {
-  color: rgb(43, 255, 0);
+	color: rgb(43, 255, 0);
 }
 html.colepete a:hover {
-  color: rgba(181, 255, 225, 0.5);
+	color: rgba(181, 255, 225, 0.5);
 }
-
 
 /* Sign Up Page */
 html.signup button {
-  padding: 10px;
-  border-radius: 7px;
-  background-color: #331832;
-  color: #E54F6D;
-  border: none;
-  cursor: pointer;
+	padding: 10px;
+	border-radius: 7px;
+	background-color: #331832;
+	color: #e54f6d;
+	border: none;
+	cursor: pointer;
 }
 html.signup input {
-  background-color: #C8DDE5;
-  color: #344055;
-  padding: 8px;
-  border-radius: 5px;
+	background-color: #c8dde5;
+	color: #344055;
+	padding: 8px;
+	border-radius: 5px;
 }
 html.signup label {
-  cursor: text;
-  color: #5C96AD;
+	cursor: text;
+	color: #5c96ad;
 }
 
 /* CodingRedpanda's Section */
 
 html.codingredpanda a {
-  color: #ff7300;
-  text-decoration: none;
+	color: #ff7300;
+	text-decoration: none;
 }
 html.codingredpanda a:hover {
-  color: rgba(255, 145, 0, 0.695);
+	color: rgba(255, 145, 0, 0.695);
 }
 html.codingredpanda a:visited {
-  color: rgba(200, 255, 0, 0.5);
+	color: rgba(200, 255, 0, 0.5);
 }
 html.codingredpanda h1 {
-  float:left;
-  font-family: 'Fira Code', monospace;
+	float: left;
+	font-family: "Fira Code", monospace;
 }
 html.codingredpanda h2 {
-  font-family: 'Fira Code', monospace;
+	font-family: "Fira Code", monospace;
 }
 html.codingredpanda h3 {
-  font-family: 'Fira Code', monospace;
+	font-family: "Fira Code", monospace;
 }
 html.codingredpanda p {
-  font-family: 'Fira Code', monospace;
-  float:inline-end;
+	font-family: "Fira Code", monospace;
+	float: inline-end;
 }
 
 /* Darkdarcool's section */
 
 html.darkdarcool .App {
-  text-align: center;
+	text-align: center;
 }
 
 html.darkdarcool .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  html.darkdarcool .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	html.darkdarcool .App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 html.darkdarcool .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
-
 
 /*
   Start of my own CSS
 */
-html.darkdarcool .button, button {
-  display: inline-block;
-  padding: 8px 18px;
-  background: #1d51b1;
-  box-shadow: 0px 4px 0px #0f2e81;
-  border-radius: 6px;
-  color: #FFFFFF;
-  text-decoration: none;
-  line-height: 100%;
-  border: 0;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: inherit;
-  transition-property: transform, box-shadow;
-  transition-duration: 120ms;
+html.darkdarcool .button,
+button {
+	display: inline-block;
+	padding: 8px 18px;
+	background: #1d51b1;
+	box-shadow: 0px 4px 0px #0f2e81;
+	border-radius: 6px;
+	color: #ffffff;
+	text-decoration: none;
+	line-height: 100%;
+	border: 0;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
+	transition-property: transform, box-shadow;
+	transition-duration: 120ms;
 }
 
 html.darkdarcool select {
-  display: inline-block;
-  padding: 8px 18px;
-  padding-right: 30px;
-  -webkit-appearance: none;
-  background: #3d3d3d url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E") calc(100% - 18px) 50% / 12px no-repeat;
-  box-shadow: 0px 4px 0px #252525;
-  border-radius: 6px;
-  color: #FFFFFF;
-  line-height: 100%;
-  border: 0;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: inherit;
+	display: inline-block;
+	padding: 8px 18px;
+	padding-right: 30px;
+	-webkit-appearance: none;
+	background: #3d3d3d
+		url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E")
+		calc(100% - 18px) 50% / 12px no-repeat;
+	box-shadow: 0px 4px 0px #252525;
+	border-radius: 6px;
+	color: #ffffff;
+	line-height: 100%;
+	border: 0;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
 }
 
 html.darkdarcool select::-ms-expand {
-  display: none;
+	display: none;
 }
 
-html.darkdarcool .button:active, button:active, .ql-active {
-  box-shadow: none;
-  transform: translateY(4px);
+html.darkdarcool .button:active,
+button:active,
+.ql-active {
+	box-shadow: none;
+	transform: translateY(4px);
 }
-html.darkdarcool @font-face{font-family:'Inter var experimental';font-weight:100 900;font-style:oblique 0 10deg;font-display:swap;src:url(//rsms.me/inter/font-files/Inter.var.woff2?v=3.11) format("woff2")}
+html.darkdarcool @font-face {
+	font-family: "Inter var experimental";
+	font-weight: 100 900;
+	font-style: oblique 0 10deg;
+	font-display: swap;
+	src: url(//rsms.me/inter/font-files/Inter.var.woff2?v=3.11) format("woff2");
+}
 
-html.darkdarcool button, a, input, [contenteditable], select {
-  outline: shadow;
-  /* Bad accessibility so reminder to add a shadow outline l8r */
+html.darkdarcool button,
+a,
+input,
+[contenteditable],
+select {
+	outline: shadow;
+	/* Bad accessibility so reminder to add a shadow outline l8r */
 }
 
 html.darkdarcool body {
-  font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Lato", "Helvetica", "Arial", sans-serif;
-  background: #1A1C1E;
-  color: #FFFFFF;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 60px 10px;
-  clear: both;
+	font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI",
+		"Roboto", "Lato", "Helvetica", "Arial", sans-serif;
+	background: #1a1c1e;
+	color: #ffffff;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 60px 10px;
+	clear: both;
 }
 html.darkdarcool #wrapper {
-  clear: both;
+	clear: both;
 }
-html.darkdarcool input:not(#imageSelect), [contenteditable] {
-  color: #FFFFFF;
-  background: #1A1C1E;
-  border-radius: 6px;
-  border: 1px solid #212428;
-  padding: 10px;
+html.darkdarcool input:not(#imageSelect),
+[contenteditable] {
+	color: #ffffff;
+	background: #1a1c1e;
+	border-radius: 6px;
+	border: 1px solid #212428;
+	padding: 10px;
 }
 
 html.darkdarcool a {
-  text-decoration: none;
-  color: #3aa6f3;
-/*   display: inline-block */
+	text-decoration: none;
+	color: #3aa6f3;
+	/*   display: inline-block */
 }
 
 html.darkdarcool a:not(.button):not(button):not(.entry):hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
-
 
 /* keep these at the bottom because they ruin replit syntax highlighting */
 
-html.darkdarcool a[href*="//discord.gg"], a[href*="//repl.it/discord"], a[href*="//twitter.com"], a[href*="//discordapp.com"] {
-/* 	left: -1.25em; */
-	position: relative
+html.darkdarcool a[href*="//discord.gg"], a[href*="//repl.it/discord"], a[href*="//twitter.com"], a[href*="//discordapp.com"]
+{
+	/* 	left: -1.25em; */
+	position: relative;
 }
-html.darkdarcool a[href*="//repl.it/discord"]::before, a[href*="//discord.gg"]::before, a[href*="//twitter.com"]::before, a[href*="//discordapp.com"]::before {
-	content: ' ';
+html.darkdarcool a[href*="//repl.it/discord"]::before, a[href*="//discord.gg"]::before, a[href*="//twitter.com"]::before, a[href*="//discordapp.com"]::before
+{
+	content: " ";
 	background-size: contain;
 	width: 1.25em;
 	height: 1.25em;
-	position:  relative;
+	position: relative;
 	display: inline-block;
 	top: 0.25em;
-	margin-top: -.5em;
+	margin-top: -0.5em;
 }
-html.darkdarcool a[href*="//discord.gg"]::before, a[href*="//repl.it/discord"]::before, a[href*="//discordapp.com"]::before {
+html.darkdarcool a[href*="//discord.gg"]::before, a[href*="//repl.it/discord"]::before, a[href*="//discordapp.com"]::before
+{
 	background-image: url(/static/discord-logo-white.png);
 }
 
-html.darkdarcool a[href*="//twitter.com"]::before {
+html.darkdarcool a[href*="//twitter.com"]::before
+{
 	background-image: url(/static/twitter-logo-blue.png);
 }
 /* Header ~~ Codemonkey51 */
@@ -344,21 +365,21 @@ html.darkdarcool a[href*="//twitter.com"]::before {
 #navbar li {
 	list-style-type: none;
 	display: inline;
-  /* float: left; */
+	/* float: left; */
 	padding-right: 20px;
 }
 
 #navbar {
-	border:1px solid #fff;
-	padding:20px;
-	display:inline-block;
+	border: 1px solid #fff;
+	padding: 20px;
+	display: inline-block;
 }
 
 #navbar a {
-  color: rgb(0, 89, 255);
-  font-size: 25px;
+	color: rgb(0, 89, 255);
+	font-size: 25px;
 }
 #navbar a:hover {
-  color: rgba(10, 90, 240, 0.695);
-  /*font-size: 26px;*/
+	color: rgba(10, 90, 240, 0.695);
+	/*font-size: 26px;*/
 }
