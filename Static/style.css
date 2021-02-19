@@ -104,24 +104,25 @@ html.signup a:hover {
 html.whip h1 {
 	font-family: "Walter Turncoat", cursive;
 	font-size: 80px;
-	color: #c0c999;
+	color: #f24c00;
 }
 html.whip h2 {
 	font-family: "Walter Turncoat", cursive;
 	font-size: 60px;
-	color: #c0c999;
+	color: #f24c00;
 }
 html.whip h3 {
 	font-family: "Walter Turncoat", cursive;
 	font-size: 50px;
-	color: #c0c999;
+	color: #f24c00;
 }
 html.whip p {
-	color: #0ead69;
+	color: #c0c999;
 	font-size: 23px;
 	font-family: "Architects Daughter", cursive;
 }
 html.whip a {
+	text-decoration: none;
 	color: #470063;
 	font-family: "Architects Daughter", cursive;
 }
