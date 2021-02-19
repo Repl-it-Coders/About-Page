@@ -104,17 +104,32 @@ html.signup a:hover {
 html.whip h1 {
 	font-family: "Walter Turncoat", cursive;
 	font-size: 80px;
-	color: #ee4266;
+	color: #c0c999;
 }
 html.whip h2 {
 	font-family: "Walter Turncoat", cursive;
 	font-size: 60px;
-	color: #ee4266;
+	color: #c0c999;
+}
+html.whip h3 {
+	font-family: "Walter Turncoat", cursive;
+	font-size: 50px;
+	color: #c0c999;
 }
 html.whip p {
 	color: #0ead69;
 	font-size: 23px;
 	font-family: "Architects Daughter", cursive;
+}
+html.whip a {
+	color: #470063;
+	font-family: "Architects Daughter", cursive;
+}
+html.whip a:hover {
+	color: rgba(71, 0, 99, 0.695);
+}
+html.whip .nolist {
+	list-style: none;
 }
 
 /* Codemonkey51's Section */
