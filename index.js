@@ -49,31 +49,11 @@ app.get("/signup", (req, res) => {
 //   });
 // });
 
-app.get("/:user", (o, e) => {
-	fs.exists(`views/${o.params.user}.html`, (a) => {
-		a
-			? (e.render(o.params.user),
-			  "ch1ck3n" == o.params.user
-					? console.log("Yeet someone is actually visiting ch1ck3n's page")
-					: "codemonkey51" == o.params.user.toLowerCase()
-					? console.log(
-							"Does anyone even remember Codemonkey51, still going there anyways"
-					  )
-					: "darkdarcool" == o.params.user
-					? console.log("Wow, what a lame-o. Someone is in darkdarcool's page!")
-					: "codingredpanda" == o.params.user
-					? console.log("ooooh, u want to see the amazing CodingRedpanda?")
-					: "jbloves27" == o.params.user
-					? console.log(
-							"I don't know what JB was gonna write so ummm hoi ~~ Whippingdot"
-					  )
-					: "isaiah08" == o.params.user
-					? console.log(
-							"Wait, someone is ACTUALLY looking the isaiah08 page???"
-					  )
-					: console.log("Serving user: " + o.params.user))
-			: (e.status(404).render("404"), console.log("404 Error, Page Not Found"));
-	});
+app.get("/:user", (req, res) => { // you've been é-ed - firefish
+	if (fs.existsSync(`views/${req.params.user}.html`)) {
+    console.log("Serving user: " + req.params.user);
+    res.render(`${req.params.user}.html`);
+  } else res.status(404).render("404.html");
 });
 
 // Keep the below commented:
@@ -129,6 +109,7 @@ app.get('/programmeruser', (req, res) => {
 
 // app.use((req, res, next) => {res.status(404).f8mrender('404')});
 // HAH I FIXED A BUG - elipie
+// you did? - jb
 app.listen(8000, () => {
 	console.log("Server running.");
 });
