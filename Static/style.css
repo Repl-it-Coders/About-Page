@@ -406,7 +406,7 @@ html.darkdarcool a[href*="//twitter.com"]::before
 .theme-switch-wrapper {
 	display: flex;
 	align-items: center;
-	float: left;
+	float: right;
 }
 
 em {
@@ -479,10 +479,9 @@ input:checked + .slider:before {
 }
 
 #navbar a {
-	color: rgb(0, 89, 255);
+	color: #ffa600;
 	font-size: 25px;
 }
 #navbar a:hover {
-	color: rgba(10, 90, 240, 0.695);
-	/*font-size: 26px;*/
+	color: rgba(255, 166, 0, 0.695);
 }
