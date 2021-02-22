@@ -17,10 +17,33 @@ font-family: 'Fira Code', monospace;
 font-family: 'Architects Daughter', cursive;
 font-family: 'Walter Turncoat', cursive;
 */
+
+/* Custom CSS Properties */
+:root {
+	--bg-color: #fff4eb;
+	--p-color: #5f3d30;
+	--heading-colors: #472b1c;
+	--link-color: #1ab092;
+	--head-link-color: #a8c7bb;
+	--link-hover: rgba(26, 176, 146, 0.695);
+	--head-link-hover: rgba(168, 199, 187, 0.695);
+	--nav-border: black;
+}
+
+[data-theme="dark"] {
+	--bg-color: #000b14;
+	--p-color: #a0c2cf;
+	--heading-colors: #b8d4e3;
+	--link-color: #e54f6d;
+	--head-link-color: #000dff;
+	--link-hover: rgba(229, 79, 109, 0.694);
+	--head-link-hover: #3a43f5;
+	--nav-border: white;
+}
+
 /* HTML TAGS */
 html {
-	background-color: #000b14;
-	color: #ffffff;
+	background-color: var(--bg-color);
 	font-family: "Kanit", sans-serif;
 }
 html.whip {
@@ -58,17 +81,17 @@ html.codingredpanda {
 
 h1 {
 	font-size: 60px;
-	color: #b8d4e3;
+	color: var(--heading-colors);
 }
 
 h2 {
 	font-size: 50px;
-	color: #b8d4e3;
+	color: var(--heading-colors);
 }
 
 p {
-	color: #a0c2cf;
 	font-size: 20px;
+	color: var(--p-color);
 }
 
 .center {
@@ -79,25 +102,25 @@ p {
 	font-size: 125%;
 }
 
-/* HOME */
+/* HOME & SIGNUP */
 
 html.home h1 a,
 html.signup h1 a {
-	color: #000dff;
+	color: var(--head-link-color);
 	font-family: "Permanent Marker", cursive;
 }
 html.home h1 a:hover,
 html.signup h1 a:hover {
-	color: #3a43f5;
+	color: var(--head-link-hover);
 }
 html.home a,
 html.signup a {
-	color: #e54f6d;
+	color: var(--link-color);
 	text-decoration: none;
 }
 html.home a:hover,
 html.signup a:hover {
-	color: rgba(229, 79, 109, 0.695);
+	color: var(--link-hover);
 }
 
 /* Whippingdot's Section */
@@ -262,7 +285,7 @@ button {
 	background: #1d51b1;
 	box-shadow: 0px 4px 0px #0f2e81;
 	border-radius: 6px;
-	color: #ffffff;
+	color: white;
 	text-decoration: none;
 	line-height: 100%;
 	border: 0;
@@ -283,7 +306,7 @@ html.darkdarcool select {
 		calc(100% - 18px) 50% / 12px no-repeat;
 	box-shadow: 0px 4px 0px #252525;
 	border-radius: 6px;
-	color: #ffffff;
+	color: white;
 	line-height: 100%;
 	border: 0;
 	cursor: pointer;
@@ -322,7 +345,7 @@ html.darkdarcool body {
 	font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI",
 		"Roboto", "Lato", "Helvetica", "Arial", sans-serif;
 	background: #1a1c1e;
-	color: #ffffff;
+	color: white;
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 60px 10px;
@@ -333,7 +356,7 @@ html.darkdarcool #wrapper {
 }
 html.darkdarcool input:not(#imageSelect),
 [contenteditable] {
-	color: #ffffff;
+	color: white;
 	background: #1a1c1e;
 	border-radius: 6px;
 	border: 1px solid #212428;
@@ -387,7 +410,7 @@ html.darkdarcool a[href*="//twitter.com"]::before
 }
 
 #navbar {
-	border: 1px solid #fff;
+	border: 1px solid var(--nav-border);
 	padding: 20px;
 	display: inline-block;
 }
