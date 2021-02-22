@@ -28,6 +28,8 @@ font-family: 'Walter Turncoat', cursive;
 	--link-hover: rgba(26, 176, 146, 0.695);
 	--head-link-hover: rgba(168, 199, 187, 0.695);
 	--nav-border: black;
+	--nav-link: #ffa600;
+	--nav-link-hover: rgba(255, 166, 0, 0.695);
 }
 
 [data-theme="dark"] {
@@ -39,6 +41,8 @@ font-family: 'Walter Turncoat', cursive;
 	--link-hover: rgba(229, 79, 109, 0.694);
 	--head-link-hover: #3a43f5;
 	--nav-border: white;
+	--nav-link: #0059ff;
+	--nav-link-hover: rgba(0, 89, 255, 0.695);
 }
 
 /* HTML TAGS */
@@ -409,11 +413,6 @@ html.darkdarcool a[href*="//twitter.com"]::before
 	float: right;
 }
 
-em {
-	margin-left: 10px;
-	font-size: 1rem;
-}
-
 .theme-switch {
 	display: inline-block;
 	height: 34px;
@@ -479,9 +478,9 @@ input:checked + .slider:before {
 }
 
 #navbar a {
-	color: #ffa600;
+	color: var(--nav-link);
 	font-size: 25px;
 }
 #navbar a:hover {
-	color: rgba(255, 166, 0, 0.695);
+	color: var(--nav-link-hover);
 }
