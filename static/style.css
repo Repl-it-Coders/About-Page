@@ -206,7 +206,8 @@ html.colepete ul.YAA {
 html.colepete ul.YII {
   width: 200px;
   text-align: center;
-  margin: auto; 
+  margin: auto;
+  color: #fbff00 
  }
 
 html.colepete h2 {
@@ -230,6 +231,21 @@ html.colepete a {
 }
 html.colepete a:hover {
 	color: rgba(181, 255, 225, 0.5);
+}
+html.colepete a.blue {
+	color: #00d9ff;
+}
+html.colepete a:hover.blue {
+	color: #0059ff;
+}
+html.colepete h1.yellow{
+  color: #fbff00
+}
+html.colepete h1.blue{
+  color: #00d9ff
+}
+html.colepete h4.blue{
+  color: #00d9ff
 }
 
 /* Sign Up Page */
@@ -514,6 +530,7 @@ input:checked + .slider:before {
 
 p#toggle {
   padding-top: 15px;
+  cursor: pointer;
 }
 
 /* Header ~~ Codemonkey51 */
