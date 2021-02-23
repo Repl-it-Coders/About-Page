@@ -17,9 +17,25 @@
 					<label class="theme-switch" for="checkbox">
 						<input type="checkbox" id="checkbox" />
 						<div class="slider round"></div>
+            <p id="toggle">Dark Mode Toggle</p>
 					</label>
 				</div>
 			</h1>
+      <script>
+        const toggleSwitch = document.querySelector(
+          '.theme-switch input[type="checkbox"]'
+        );
+
+        function switchTheme(e) {
+          if (e.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        }
+
+        toggleSwitch.addEventListener("change", switchTheme, false);
+      </script>
 			<ul id="navbar">
 				<li><a href="/BD103">BD103's Portfolio</a></li>
 				<li><a href="/ch1ck3n">ch1ck3n's Portfolio</a></li>
@@ -69,21 +85,6 @@
 			will be active. You can always ping me on GitHub or repl.it and I will be
 			free to help!
 		</p>
-
-		<script>
-			const toggleSwitch = document.querySelector(
-				'.theme-switch input[type="checkbox"]'
-			);
-
-			function switchTheme(e) {
-				if (e.target.checked) {
-					document.documentElement.setAttribute("data-theme", "dark");
-				} else {
-					document.documentElement.setAttribute("data-theme", "light");
-				}
-			}
-
-			toggleSwitch.addEventListener("change", switchTheme, false);
-		</script>
+    <h2 class="center"><a href="/whippingdot">Moi Page 😁</a></h2>
 	</body>
 </html>

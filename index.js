@@ -5,7 +5,7 @@ const app = express();
 const visits = 0;
 app.set("view engine", "html");
 app.engine("html", require("ejs").renderFile);
-app.use(express.static("Static"));
+app.use(express.static("static"));
 
 app.get("/", (req, res) => {
 	res.render("index");
@@ -50,6 +50,7 @@ app.get("/signup", (req, res) => {
 // });
 
 app.get("/:user", (req, res) => { // you've been é-ed - firefish
+// ÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉ - CodingRedpanda
 	if (fs.existsSync(`views/${req.params.user}.html`)) {
     console.log("Serving user: " + req.params.user);
     res.render(`${req.params.user}.html`);
