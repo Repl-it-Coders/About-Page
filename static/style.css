@@ -5,7 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap');@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
 
 /* 
 Font family choices:
@@ -50,7 +51,8 @@ font-family: 'Source Code Pro', monospace;
 
 /* HTML TAGS */
 
-html.home, html.signup {
+html.home,
+html.signup {
 	background-color: var(--bg-color);
 	font-family: "Kanit", sans-serif;
 }
@@ -70,7 +72,8 @@ html.codemonkey51 {
 	color: white;
 }
 
-html.codemonkey51 p, html.codemonkey51 h1 {
+html.codemonkey51 p,
+html.codemonkey51 h1 {
 	color: white;
 }
 
@@ -79,23 +82,25 @@ html.head {
 	background-image: "head.png";
 }
 html.codingredpanda {
-  background-color: #000b14;
+	background-color: #000b14;
 	color: rgba(200, 255, 0, 0.5);
-  font-feature-settings: "calt";
+	font-feature-settings: "calt";
 }
 
-
-html.home h1, html.signup h1 {
+html.home h1,
+html.signup h1 {
 	font-size: 60px;
 	color: var(--heading-colors);
 }
 
-html.home h2, html.signup h2 {
+html.home h2,
+html.signup h2 {
 	font-size: 50px;
 	color: var(--heading-colors);
 }
 
-html.home p, html.signup p {
+html.home p,
+html.signup p {
 	font-size: 20px;
 	color: var(--p-color);
 }
@@ -104,11 +109,11 @@ html.home p, html.signup p {
 	text-align: center;
 }
 
-
 .enlarge {
-  font-size: 100%;
-  transition: font-size 200ms;
-} .enlarge:hover {
+	font-size: 100%;
+	transition: font-size 200ms;
+}
+.enlarge:hover {
 	font-size: 125%;
 }
 
@@ -188,27 +193,27 @@ html.colepete ul.b {
 }
 html.colepete {
 	background-color: black;
-  color: rgb(255, 255,255);
-  font-family: 'Reggae One', cursive;
+	color: rgb(255, 255, 255);
+	font-family: "Reggae One", cursive;
 }
 html.colepete ul.YEE {
-  width: 500px;
-  text-align: center;
-  margin: auto; 
- }
+	width: 500px;
+	text-align: center;
+	margin: auto;
+}
 
 html.colepete ul.YAA {
-  width: 200px;
-  text-align: center;
-  margin: auto; 
+	width: 200px;
+	text-align: center;
+	margin: auto;
 }
 
 html.colepete ul.YII {
-  width: 200px;
-  text-align: center;
-  margin: auto;
-  color: #fbff00 
- }
+	width: 200px;
+	text-align: center;
+	margin: auto;
+	color: #fbff00;
+}
 
 html.colepete h2 {
 	font-size: 30px;
@@ -238,14 +243,14 @@ html.colepete a.blue {
 html.colepete a:hover.blue {
 	color: #0059ff;
 }
-html.colepete h1.yellow{
-  color: #fbff00
+html.colepete h1.yellow {
+	color: #fbff00;
 }
-html.colepete h1.blue{
-  color: #00d9ff
+html.colepete h1.blue {
+	color: #00d9ff;
 }
-html.colepete h4.blue{
-  color: #00d9ff
+html.colepete h4.blue {
+	color: #00d9ff;
 }
 
 /* Sign Up Page */
@@ -281,22 +286,31 @@ html.codingredpanda a:visited {
 	color: rgba(200, 255, 0, 0.5);
 }
 html.codingredpanda h1 {
-  font-size: 60px;
-  color: #b8d4e3;
+	font-size: 60px;
+	color: #b8d4e3;
 	float: left;
 	font-family: "Fira Code", monospace;
 }
 html.codingredpanda h2 {
-  font-size: 50px;
-  color: #b8d4e3;
+	font-size: 50px;
+	color: #b8d4e3;
 	font-family: "Fira Code", monospace;
 }
+html.home h1 a.shhh {
+	cursor: text;
+	text-decoration: none;
+	color: var(--heading-colors);
+	font-family: "Kanit", sans-serif;
+}
+html.home h1 a.shhh:hover {
+	color: var(--heading-colors);
+}
 html.codingredpanda h3 {
-  color: #b8d4e3;
+	color: #b8d4e3;
 	font-family: "Fira Code", monospace;
 }
 html.codingredpanda p {
-  font-size: 20px;  
+	font-size: 20px;
 	font-family: "Fira Code", monospace;
 	float: inline-end;
 }
@@ -460,20 +474,21 @@ html.darkdarcool a[href*="//twitter.com"]::before
 html.isaiah body {
 	background-color: black;
 	color: white;
-	font-family: 'Source Code Pro', monospace;
+	font-family: "Source Code Pro", monospace;
 }
 
-html.isaiah a:visited, a:link {
+html.isaiah a:visited,
+a:link {
 	color: red;
 }
 html.isaiah point {
-	color: rgb(12, 255, 12)
+	color: rgb(12, 255, 12);
 }
 
 /* Dark Mode */
 
 .theme-switch-wrapper {
-  padding-right: 5%;
+	padding-right: 5%;
 	display: flex;
 	align-items: center;
 	float: right;
@@ -529,8 +544,8 @@ input:checked + .slider:before {
 }
 
 p#toggle {
-  padding-top: 15px;
-  cursor: pointer;
+	padding-top: 15px;
+	cursor: pointer;
 }
 
 /* Header ~~ Codemonkey51 */
