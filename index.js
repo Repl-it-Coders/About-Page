@@ -6,12 +6,18 @@ const visits = 0;
 app.set("view engine", "html");
 app.engine("html", require("ejs").renderFile);
 app.use(express.static("static"));
-
+console.log("Look like we have one more viewer! (lol eh y did you come here)")
 app.get("/", (req, res) => {
 	res.render("index");
 	// Just decided to change this:
 	console.log("Serving Home Page");
 });
+
+app.get("/haha-e", (req, res) => {
+  console.log("haha é\n".repeat(50));
+  res.render("haha-e");
+})
+
 app.get("/signup", (req, res) => {
 	res.render("signup");
 	console.log("Serving Signup Page");
@@ -26,7 +32,7 @@ app.get("/signup", (req, res) => {
 //       if (req.params.user == "ch1ck3n") {
 //         console.log("Yeet someone is actually visiting ch1ck3n's page")
 //       } else if (req.params.user.toLowerCase() == "codemonkey51") {
-//       	console.log("Does anyone even remember Codemonkey51, still going there anyways");
+//       	console.log("Does anyone even remember Codemonkey51, still going there anyway");
 //       } else if (req.params.user == "darkdarcool") {
 //         console.log("Wow, what a lame-o. Someone is in darkdarcool's page!")
 //       }
@@ -67,7 +73,7 @@ app.get("/:user", (req, res) => { // you've been é-ed - firefish
 
 app.get('/codemonkey51', (req, res) => {
 	res.render('codemonkey51')
-	console.log("Does anyone even remember Codemonkey51, still going there anyways");
+	console.log("Does anyone even remember Codemonkey51, still going there anyway");
 });
 app.get('/colepete', (req, res) => {
   res.render('colepete');
