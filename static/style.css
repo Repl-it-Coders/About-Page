@@ -122,7 +122,7 @@ html.signup p {
 html.home h1 a,
 html.signup h1 a {
 	color: var(--head-link-color);
-  transition: color 200ms;
+	transition: color 200ms;
 	font-family: "Permanent Marker", cursive;
 }
 html.home h1 a:hover,
@@ -198,7 +198,7 @@ html.colepete {
 	font-family: "Reggae One", cursive;
 }
 img {
-  border: 5px solid #d400ff;
+	border: 5px solid #d400ff;
 }
 html.colepete ul.YEE {
 	width: 500px;
@@ -269,8 +269,8 @@ html.colepete h1.green {
 html.colepete h1.red {
 	color: rgb(255, 0, 0);
 }
-html.colepete h2.red{
-  color: rgb(255, 0, 0);
+html.colepete h2.red {
+	color: rgb(255, 0, 0);
 }
 html.colepete a.red {
 	color: rgb(255, 0, 0);
@@ -278,11 +278,11 @@ html.colepete a.red {
 html.colepete a:hover.red {
 	color: rgb(255, 156, 156);
 }
-html.colepete h1.orange{
-  color: #ff9100
+html.colepete h1.orange {
+	color: #ff9100;
 }
-html.colepete h2.orange{
-  color: #ff9100
+html.colepete h2.orange {
+	color: #ff9100;
 }
 html.colepete a.orange {
 	color: #ff9100;
@@ -291,7 +291,7 @@ html.colepete a:hover.orange {
 	color: #ffbf6a;
 }
 /* Sign Up Page */
-html.signup button {
+html.signup input.submit {
 	padding: 10px;
 	border-radius: 7px;
 	background-color: #331832;
@@ -328,8 +328,8 @@ html.codingredpanda h1 {
 	float: left;
 	font-family: "Fira Code", monospace;
 }
-html.codingredpanda h1[class=o]{
-  color:#b8d4e3;
+html.codingredpanda h1[class="o"] {
+	color: #b8d4e3;
 }
 html.codingredpanda h2 {
 	font-size: 50px;
@@ -354,7 +354,6 @@ html.codingredpanda p {
 	font-family: "Fira Code", monospace;
 	float: inline-end;
 }
-
 
 /* Isaiah08's section */
 
@@ -381,13 +380,13 @@ html.isaiah point {
 /*JB's section */
 
 html.JB body {
-  background-color: #000b14;
-  color: #000dff;
-  font-family: cursive;
+	background-color: #000b14;
+	color: #000dff;
+	font-family: cursive;
 }
 
 html.JB a:visited {
-  color: #0059ff;
+	color: #0059ff;
 }
 /* Dark Mode */
 

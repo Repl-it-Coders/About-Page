@@ -1,3 +1,19 @@
+<?php
+if($_POST["Sign Up"]) {
+  $recipient = "ReplCoders@outlook.com";
+  $subject = "Sign Up";
+  $replusername = $_POST["Username"];
+  $senderEmail = "ReplCoders@outlook.com";
+  $github = $_POST["GitHub"];
+
+  $mailBody = "Replit username is $replusername\n GitHub username is $github";
+
+  mail($recipient, $subject, $mailBody, "From: $replusername <$senderEmail");
+
+  $thankYou = "<p>Thanks ur email has been sent 😁</p>";
+}
+?>
+<!-- This was made with https://htmldog.com/techniques/formtoemail/ -->
 <!DOCTYPE html>
 <html lang="en" class="signup">
 	<head>
@@ -73,21 +89,19 @@
 		<p class="center">
 			I hope you signup as our community really <strong>needs you!</strong>
 		</p>
+
+    <?=$thankYou ?>
 		<div class="center">
-			<form method="post">
+			<form method="post" action="https://About-Page.whippingdot.repl.co/secret">
 				<label for="Username">Your Repl.It Username</label>
 				<br />
 				<input class="replit" name="Username" type="text" />
 				<br /><br />
-				<!--<label for="profile-link">Your Repl.it Profile Link</label>
-        <br>
-        <input name="profile-link" type="url">
-        <br><br>-->
 				<label for="GitHub">Your GitHub Username</label>
 				<br />
 				<input class="github" name="GitHub" type="text" />
 				<br /><br /><br />
-				<button onclick="signupNow()">Sign Up</button>
+				<input class="submit" type="submit" name="Sign Up"/>
 			</form>
 		</div>
 	</body>

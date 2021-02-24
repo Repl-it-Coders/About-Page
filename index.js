@@ -2,27 +2,26 @@ const fs = require("fs");
 
 const express = require("express");
 const app = express();
-const visits = 0;
 app.set("view engine", "html");
 app.engine("html", require("ejs").renderFile);
 app.use(express.static("static"));
-console.log("Look like we have one more viewer! (lol eh y did you come here)")
-app.get("/", (req, res) => {
+console.log("Look like we have one more viewer! (lol eh y did you come here)");
+app.get("/", (_, res) => {
 	res.render("index");
 	// Just decided to change this:
 	console.log("Serving Home Page");
 });
 
-app.get("/haha-e", (req, res) => {
-  console.log("haha é\n".repeat(50));
-  res.render("haha-e");
-})
-
-app.get("/signup", (req, res) => {
-	res.render("signup");
-	console.log("Serving Signup Page");
+app.get("/haha-e", (_, res) => {
+	console.log("haha é\n".repeat(50));
+	res.render("haha-e");
 });
 
+app.get("/signup", (_, res) => {
+	res.sendFile(__dirname + "/views/signup.php");
+	console.log("Serving Signup Page");
+});
+// * Someone please make sure this sends the PHP file
 // Don't get rid of the efficient request handlers:
 
 // app.get("/:user", (req, res) => {
@@ -55,12 +54,13 @@ app.get("/signup", (req, res) => {
 //   });
 // });
 
-app.get("/:user", (req, res) => { // you've been é-ed - firefish
-// ÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉ - CodingRedpanda
+app.get("/:user", (req, res) => {
+	// you've been é-ed - firefish
+	// ÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉ - CodingRedpanda
 	if (fs.existsSync(`views/${req.params.user}.html`)) {
-    console.log("Serving user: " + req.params.user);
-    res.render(`${req.params.user}.html`);
-  } else res.status(404).render("404.html");
+		console.log("Serving user: " + req.params.user);
+		res.render(`${req.params.user}.html`);
+	} else res.status(404).render("404.html");
 });
 
 // Keep the below commented:
