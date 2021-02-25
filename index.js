@@ -2,7 +2,25 @@ const fs = require("fs");
 
 const express = require("express");
 const app = express();
-app.set("view engine", "html","php");
+const bodyParser = require('body-parser');
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(require ('multer')().array())
+const nodemailer = require('nodemailer');
+const transport = nodemailer.createTransport({
+    host: "smtp-mail.outlook.com", // hostname VAT IS TIS
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 587, // port for secure SMTP
+    auth: {
+        user: "ReplitCoders@outlook.com",
+        pass: process.env.emailPass
+    },
+    tls: {
+        ciphers:'SSLv3'
+    }
+});
+
+app.set("view engine", "html");
 app.engine("html", require("ejs").renderFile);
 app.use(express.static("static"));
 console.log("Look like we have one more viewer! (lol eh y did you come here)");
@@ -16,10 +34,33 @@ app.get("/haha-e", (_, res) => {
 	console.log("haha é\n".repeat(50));
 	res.render("haha-e");
 });
-
 app.get("/signup", (_, res) => {
-	res.sendFile(__dirname + "/views/signup.php");
-	console.log("Serving Signup Page");
+	res.render("signup")
+  console.log("Serving SIGNUP")
+});
+
+app.post("/signup", (req, res) => {
+	console.log("sending signup email")
+	var mailOptions = {
+		from: 'ReplitCoders@outlook.com',
+		to: 'ReplitCoders@outlook.com',
+		subject: `New Application From ${req.body.Username}`,
+		text: `NEW APPLICATION! \nReplit Name: ${req.body.Username}, \nGithub: ${req.body.GitHub}.`
+	};
+	transport.sendMail(mailOptions, function(error, info){
+		if (error) {
+			console.log(error);
+		} else {
+			console.log('Email sent successfully');
+		}
+	});
+	res.redirect("/signup_confirmed")
+	
+});
+
+app.get("/signup_confirmed", (_, res) => {
+	console.log("Confirmed signup")
+	res.render("signup_confirmed")
 });
 // * Someone please make sure this sends the PHP file
 // Don't get rid of the efficient request handlers:

@@ -197,9 +197,11 @@ html.colepete {
 	color: rgb(255, 255, 255);
 	font-family: "Reggae One", cursive;
 }
-img {
+img.yeet {
 	border: 5px solid #d400ff;
 }
+
+
 html.colepete ul.YEE {
 	width: 500px;
 	text-align: center;
@@ -291,7 +293,7 @@ html.colepete a:hover.orange {
 	color: #ffbf6a;
 }
 /* Sign Up Page */
-html.signup input.submit {
+html.signup button {
 	padding: 10px;
 	border-radius: 7px;
 	background-color: #331832;
