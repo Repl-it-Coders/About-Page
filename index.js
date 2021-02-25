@@ -18,6 +18,8 @@ const transport = nodemailer.createTransport({
     }
 });
 
+fs.deleteD
+
 app.set("view engine", "html");
 app.engine("html", require("ejs").renderFile);
 app.use(express.static("static"));
