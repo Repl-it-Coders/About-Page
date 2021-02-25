@@ -2,21 +2,67 @@ const fs = require("fs");
 
 const express = require("express");
 const app = express();
-const visits = 0;
+const bodyParser = require('body-parser');
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(require ('multer')().array())
+const nodemailer = require('nodemailer');
+const transport = nodemailer.createTransport({
+    host: "smtp-mail.outlook.com", // hostname VAT IS TIS
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 587, // port for secure SMTP
+    auth: {
+        user: "ReplitCoders@outlook.com",
+        pass: process.env.emailPass
+    },
+    tls: {
+        ciphers:'SSLv3'
+    }
+});
+
 app.set("view engine", "html");
 app.engine("html", require("ejs").renderFile);
-app.use(express.static("Static"));
-
-app.get("/", (req, res) => {
+app.use(express.static("static"));
+console.log("Look like we have one more viewer! (lol eh y did you come here)");
+app.get("/", (_, res) => {
 	res.render("index");
 	// Just decided to change this:
 	console.log("Serving Home Page");
 });
-app.get("/signup", (req, res) => {
-	res.render("signup");
-	console.log("Serving Signup Page");
+
+app.get("/haha-e", (_, res) => {
+	console.log("haha é\n".repeat(50));
+	res.render("haha-e");
+});
+app.get("/signup", (_, res) => {
+	res.render("signup")
+  console.log("Serving SIGNUP")
 });
 
+app.post("/signup", (req, res) => {
+	console.log("sending signup email")
+	var mailOptions = {
+		from: 'ReplitCoders@outlook.com',
+		to: 'ReplitCoders@outlook.com',
+		subject: `New Application From ${req.body.Username}`,
+		text: `NEW APPLICATION! \nReplit Name: ${req.body.Username}, \nGithub: ${req.body.GitHub}.`
+	};
+	transport.sendMail(mailOptions, function(error, info){
+		if (error) {
+			console.log(error);
+		} else {
+			console.log('Email sent successfully');
+		}
+	});
+	res.redirect("/signup_confirmed")
+	
+});
+
+app.get("/signup_confirmed", (_, res) => {
+	console.log("Confirmed signup")
+	res.render("signup_confirmed")
+});
+// * Someone please make sure this sends the PHP file
 // Don't get rid of the efficient request handlers:
 
 // app.get("/:user", (req, res) => {
@@ -26,7 +72,7 @@ app.get("/signup", (req, res) => {
 //       if (req.params.user == "ch1ck3n") {
 //         console.log("Yeet someone is actually visiting ch1ck3n's page")
 //       } else if (req.params.user.toLowerCase() == "codemonkey51") {
-//       	console.log("Does anyone even remember Codemonkey51, still going there anyways");
+//       	console.log("Does anyone even remember Codemonkey51, still going there anyway");
 //       } else if (req.params.user == "darkdarcool") {
 //         console.log("Wow, what a lame-o. Someone is in darkdarcool's page!")
 //       }
@@ -49,31 +95,13 @@ app.get("/signup", (req, res) => {
 //   });
 // });
 
-app.get("/:user", (o, e) => {
-	fs.exists(`views/${o.params.user}.html`, (a) => {
-		a
-			? (e.render(o.params.user),
-			  "ch1ck3n" == o.params.user
-					? console.log("Yeet someone is actually visiting ch1ck3n's page")
-					: "codemonkey51" == o.params.user.toLowerCase()
-					? console.log(
-							"Does anyone even remember Codemonkey51, still going there anyways"
-					  )
-					: "darkdarcool" == o.params.user
-					? console.log("Wow, what a lame-o. Someone is in darkdarcool's page!")
-					: "codingredpanda" == o.params.user
-					? console.log("ooooh, u want to see the amazing CodingRedpanda?")
-					: "jbloves27" == o.params.user
-					? console.log(
-							"I don't know what JB was gonna write so ummm hoi ~~ Whippingdot"
-					  )
-					: "isaiah08" == o.params.user
-					? console.log(
-							"Wait, someone is ACTUALLY looking the isaiah08 page???"
-					  )
-					: console.log("Serving user: " + o.params.user))
-			: (e.status(404).render("404"), console.log("404 Error, Page Not Found"));
-	});
+app.get("/:user", (req, res) => {
+	// you've been é-ed - firefish
+	// ÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉ - CodingRedpanda
+	if (fs.existsSync(`views/${req.params.user}.html`)) {
+		console.log("Serving user: " + req.params.user);
+		res.render(`${req.params.user}.html`);
+	} else res.status(404).render("404.html");
 });
 
 // Keep the below commented:
@@ -86,7 +114,7 @@ app.get("/:user", (o, e) => {
 
 app.get('/codemonkey51', (req, res) => {
 	res.render('codemonkey51')
-	console.log("Does anyone even remember Codemonkey51, still going there anyways");
+	console.log("Does anyone even remember Codemonkey51, still going there anyway");
 });
 app.get('/colepete', (req, res) => {
   res.render('colepete');
@@ -129,6 +157,7 @@ app.get('/programmeruser', (req, res) => {
 
 // app.use((req, res, next) => {res.status(404).f8mrender('404')});
 // HAH I FIXED A BUG - elipie
+// you did? - jb
 app.listen(8000, () => {
 	console.log("Server running.");
 });

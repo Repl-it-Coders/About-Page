@@ -13,23 +13,41 @@
 				<a class="enlarge" href="https://about-page.whippingdot.repl.co/"
 					>About Us!</a
 				>
+				<div class="theme-switch-wrapper">
+					<label class="theme-switch" for="checkbox">
+						<input type="checkbox" id="checkbox" />
+						<div class="slider round"></div>
+						<p id="toggle">Dark Mode Toggle</p>
+					</label>
+				</div>
 			</h1>
+			<script>
+				const toggleSwitch = document.querySelector(
+					'.theme-switch input[type="checkbox"]'
+				);
+
+				function switchTheme(e) {
+					document.documentElement.setAttribute("data-theme", e.target.checked ? "dark" : "light");
+				}
+
+				toggleSwitch.addEventListener("change", switchTheme, false);
+			</script>
 			<ul id="navbar">
 				<li><a href="/BD103">BD103's Portfolio</a></li>
-        <li><a href="/ch1ck3n">ch1ck3n's Portfolio</a></li>
-        <li><a href="/Codemonkey51">Codemonkey51's Portfolio</a></li>
-        <li><a href="/CodingRedpanda">CodingRedpanda's Portfolio</a></li>
-        <li><a href="/ColePete">ColePete's Portfolio</a></li>
-        <li><a href="/darkdarcool">darkdarcool's Portfolio</a></li>
-        <li><a href="/elipie">elipie's Portfolio</a></li>
-        <li><a href="/EpicRaisin">EpicRaisin's Portfolio</a></li>
-        <li><a href="/forer">forer's Portfolio</a></li>
-        <li><a href="/headiscoding">headiscoding's Portfolio</a></li>
-        <li><a href="/isaiah08">isaiah08's Portfolio</a></li>
-        <li><a href="/JBloves27">JBloves27's Portfolio</a></li>
-        <li><a href="/programmeruser">programmeruser's Portfolio</a></li>
-        <li><a href="/whippingdot">whippingdot's Portfolio</a></li>
-        <li><a href="/zplusfour">zplusfour's Portfolio</a></li>
+				<li><a href="/ch1ck3n">ch1ck3n's Portfolio</a></li>
+				<li><a href="/Codemonkey51">Codemonkey51's Portfolio</a></li>
+				<li><a href="/CodingRedpanda">CodingRedpanda's Portfolio</a></li>
+				<li><a href="/ColePete">ColePete's Portfolio</a></li>
+				<li><a href="/darkdarcool">darkdarcool's Portfolio</a></li>
+				<li><a href="/elipie">elipie's Portfolio</a></li>
+				<li><a href="/EpicRaisin">EpicRaisin's Portfolio</a></li>
+				<li><a href="/forer">forer's Portfolio</a></li>
+				<li><a href="/headiscoding">headiscoding's Portfolio</a></li>
+				<li><a href="/isaiah08">isaiah08's Portfolio</a></li>
+				<li><a href="/JBloves27">JBloves27's Portfolio</a></li>
+				<li><a href="/programmeruser">programmeruser's Portfolio</a></li>
+				<li><a href="/whippingdot">whippingdot's Portfolio</a></li>
+				<li><a href="/zplusfour">zplusfour's Portfolio</a></li>
 			</ul>
 			<div class="center">
 				<ul id="navbar">
@@ -38,7 +56,7 @@
 			</div>
 			<br />
 		</header>
-		<h1 class="center">Hoi there!</h1>
+		<h1 class="center">Hoi ther<a class="shhh" href="/secret">e</a>!</h1>
 		<p>
 			I(<a href="https://repl.it/@Whippingdot">Whippingdot</a>) created this
 			organization because I wanted to have an organization for us coders who

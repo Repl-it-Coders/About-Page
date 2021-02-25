@@ -13,7 +13,30 @@
 				<a class="enlarge" href="https://about-page.whippingdot.repl.co/"
 					>About Us!</a
 				>
+
+        <div class="theme-switch-wrapper">
+					<label class="theme-switch" for="checkbox">
+						<input type="checkbox" id="checkbox" />
+						<div class="slider round"></div>
+            <p id="toggle">Dark Mode<br/>Toggle</p>
+					</label>
+				</div>
 			</h1>
+      <script>
+        const toggleSwitch = document.querySelector(
+          '.theme-switch input[type="checkbox"]'
+        );
+
+        function switchTheme(e) {
+          if (e.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        }
+
+        toggleSwitch.addEventListener("change", switchTheme, false);
+      </script>
 			<ul id="navbar">
 				<li><a href="/BD103">BD103's Portfolio</a></li>
 				<li><a href="/ch1ck3n">ch1ck3n's Portfolio</a></li>
@@ -31,41 +54,32 @@
 				<li><a href="/whippingdot">whippingdot's Portfolio</a></li>
 				<li><a href="/zplusfour">zplusfour's Portfolio</a></li>
 			</ul>
-			<div class="center">
-				<ul id="navbar">
-					<li><a href="/signup">Sign Up!</a></li>
-				</ul>
-			</div>
 			<br />
 		</header>
 		<h1 class="center">Signing Up!</h1>
 		<p class="center">
 			This is where you sign up to join the GitHub organization!
 		</p>
-		<h2 class="center">The form</h2>
 		<p class="center">
 			We will just need a few things from you. We will need your repl.it account
 			and your GitHub account for consideration. If we decide to allow you to
-			join the organization you will get ping ponged on repl.it or GitHub.
+			join the organization you will get pinged on repl.it and/or GitHub.
 		</p>
 		<p class="center">
-			I hope you signup as are community really <strong>needs you!</strong>
+			I hope you signup as our community really <strong>needs you!</strong>
 		</p>
+
 		<div class="center">
-			<form method="post">
+			<form method="post" action="https://About-Page.whippingdot.repl.co/signup">
 				<label for="Username">Your Repl.It Username</label>
 				<br />
 				<input class="replit" name="Username" type="text" />
 				<br /><br />
-				<!--<label for="profile-link">Your Repl.it Profile Link</label>
-        <br>
-        <input name="profile-link" type="url">
-        <br><br>-->
 				<label for="GitHub">Your GitHub Username</label>
 				<br />
 				<input class="github" name="GitHub" type="text" />
 				<br /><br /><br />
-				<button onclick="signupNow()">Sign Up</button>
+				<button>Submit</button>
 			</form>
 		</div>
 	</body>
