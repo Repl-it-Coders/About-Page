@@ -1,10 +1,10 @@
 <?php
 if($_POST["Sign Up"]) {
-  $recipient = "ReplCoders@outlook.com";
+  $recipient = "ReplitCoders@outlook.com";
   $subject = "Sign Up";
-  $replusername = $_POST["Username"];
+  $replusername = $_POST["replit"];
   $senderEmail = "ReplCoders@outlook.com";
-  $github = $_POST["GitHub"];
+  $github = $_POST["github"];
 
   $mailBody = "Replit username is $replusername\n GitHub username is $github";
 

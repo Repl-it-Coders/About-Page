@@ -2,7 +2,7 @@ const fs = require("fs");
 
 const express = require("express");
 const app = express();
-app.set("view engine", "html");
+app.set("view engine", "html","php");
 app.engine("html", require("ejs").renderFile);
 app.use(express.static("static"));
 console.log("Look like we have one more viewer! (lol eh y did you come here)");
