@@ -1,56 +1,163 @@
-// TO CONFIGURE:
-// UPLOAD A IMAGE TO USE AS A FAVICON INTO THE 'TEMPLATES' FOLDER
-// THEN RENAME IT TO 'favicon.png'
-// IT WILL AUTOMATICALLY BE SET AS THE FAVICON
-// GOTO ALL OF THE HTML DOCUMENTS IN THE 'TEMPLATES' FOLDER AND EDIT THE TEXT.
-// TELL PEOPLE ABOUT YOUR SITE!
+const fs = require("fs");
 
-const express = require('express');
-
+const express = require("express");
 const app = express();
-
-var options = { 
-  root: __dirname+'/templates/'
-}; 
-
-function sendFile(filename, res) {
-  return res.sendFile(filename, options)
-}
-
-function sendFileSpecial(filename, res, int) {
-  res.status(int)
-  return res.sendFile(filename, options)
-}
-
-app.get('/', (req, res) => {
-  sendFile('index.html', res)
+const bodyParser = require('body-parser');
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(require ('multer')().array())
+const nodemailer = require('nodemailer');
+const transport = nodemailer.createTransport({
+    host: "smtp-mail.outlook.com", // hostname VAT IS TIS
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 587, // port for secure SMTP
+    auth: {
+        user: "ReplitCoders@outlook.com",
+        pass: process.env.emailPass
+    },
+    tls: {
+        ciphers:'SSLv3'
+    }
 });
 
-app.get('/about', (req, res) => {
-  sendFile('about.html', res)
+app.set("view engine", "html");
+app.engine("html", require("ejs").renderFile);
+app.use(express.static("static"));
+console.log("Look like we have one more viewer! (lol eh y did you come here)");
+app.get("/", (_, res) => {
+	res.render("index");
+	// Just decided to change this:
+	console.log("Serving Home Page");
 });
 
-app.get('/style.css', (req, res) => {
-  sendFile('style.css', res)
+app.get("/haha-e", (_, res) => {
+	console.log("haha é\n".repeat(50));
+	res.render("haha-e");
+});
+app.get("/signup", (_, res) => {
+	res.render("signup")
+  console.log("Serving SIGNUP")
 });
 
-app.get('/script.js', (req, res) => {
-  sendFile('script.js', res)
+app.post("/signup", (req, res) => {
+	console.log("sending signup email")
+	var mailOptions = {
+		from: 'ReplitCoders@outlook.com',
+		to: 'ReplitCoders@outlook.com',
+		subject: `New Application From ${req.body.Username}`,
+		text: `NEW APPLICATION! \nReplit Name: ${req.body.Username}, \nGithub: ${req.body.GitHub}.`
+	};
+	transport.sendMail(mailOptions, function(error, info){
+		if (error) {
+			console.log(error);
+		} else {
+			console.log('Email sent successfully');
+		}
+	});
+	res.redirect("/signup_confirmed")
+	
 });
 
-app.get('/imgs/Dark_Mode.svg', (req, res) => {
-  sendFile('imgs/Dark_Mode.svg', res)
+app.get("/signup_confirmed", (_, res) => {
+	console.log("Confirmed signup")
+	res.render("signup_confirmed")
+});
+// * Someone please make sure this sends the PHP file
+// Don't get rid of the efficient request handlers:
+
+// app.get("/:user", (req, res) => {
+//   fs.exists(`views/${req.params.user}.html`, (exists) => {
+//     if (exists) {
+//       res.render(req.params.user);
+//       if (req.params.user == "ch1ck3n") {
+//         console.log("Yeet someone is actually visiting ch1ck3n's page")
+//       } else if (req.params.user.toLowerCase() == "codemonkey51") {
+//       	console.log("Does anyone even remember Codemonkey51, still going there anyway");
+//       } else if (req.params.user == "darkdarcool") {
+//         console.log("Wow, what a lame-o. Someone is in darkdarcool's page!")
+//       }
+//       else if (req.params.user == "codingredpanda") {
+//         console.log("ooooh, u want to see the amazing CodingRedpanda?")
+//       }
+//       else if (req.params.user == "jbloves27") {
+//         console.log("I don't know what JB was gonna write so ummm hoi ~~ Whippingdot")//hrmm...
+// 	  }
+// 	  else if (req.params.user == "isaiah08") {
+//         console.log("Wait, someone is ACTUALLY looking the isaiah08 page???")
+//       }
+// 	else {
+//         console.log("Serving user: " + req.params.user);
+//       }
+//     } else {
+//       res.status(404).render("404");
+//       console.log("404 Error, Page Not Found");
+//     }
+//   });
+// });
+
+app.get("/:user", (req, res) => {
+	// you've been é-ed - firefish
+	// ÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉ - CodingRedpanda
+	if (fs.existsSync(`views/${req.params.user}.html`)) {
+		console.log("Serving user: " + req.params.user);
+		res.render(`${req.params.user}.html`);
+	} else res.status(404).render("404.html");
 });
 
-app.get('/favicon.png', (req, res) => {
-  sendFile('favicon.png', res)
+// Keep the below commented:
+
+/*app.get('/ch1ck3n', (req, res) => {
+
+  res.render('ch1ck3n');
+  console.log("Entering, the one, the only, ch1ck3n!");
 });
 
-
-app.get('*', (req, res) => {
-  sendFileSpecial('404.html', res, 404);
+app.get('/codemonkey51', (req, res) => {
+	res.render('codemonkey51')
+	console.log("Does anyone even remember Codemonkey51, still going there anyway");
+});
+app.get('/colepete', (req, res) => {
+  res.render('colepete');
+  console.log("Going to ColePete's page...");
 });
 
-app.listen(3000, () => {
-  console.log('server started');
+app.get('/dark', (req, res) => {
+  
+  res.render('dark');
+  console.log("You have gone to darkdarcool's page aahahaha");
+});
+
+app.get('/codingredpanda', (req, res) => {
+  res.render('codingredpanda');
+  console.log("a redpanda who may or may not be a hacker...");
+});
+
+app.get('/JBloves27', (req, res) => {
+  res.render('JBLOVES');
+  console.log('Entering glitch territory!')
+});
+app.get('/BD103', (req, res) => {
+ 
+  res.render('bd');
+  console.log("Yay someone actually is looking at BD103's page! 🥳")
+});
+app.get("/head", (req, res) => {
+  res.render("head");
+  console.log("Entering a floating head's territory")
+});
+app.get("/epicraisin", (req, res) => {
+  res.render("epicraisin");
+  console.log("beep beep epicraisin");
+});
+app.get('/programmeruser', (req, res) => {
+	res.redirect('https://programmeruser.repl.co');
+});*/
+
+// app.use((req, res, next) => {res.status(404).send("Error")});
+
+// app.use((req, res, next) => {res.status(404).f8mrender('404')});
+// HAH I FIXED A BUG - elipie
+// you did? - jb
+app.listen(8000, () => {
+	console.log("Server running.");
 });

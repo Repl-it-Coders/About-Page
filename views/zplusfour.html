@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>zplusfour - simple fibonacci :)</title>
+	</head>
+	<body>
+		<form id="form">
+			<input type="number" name="n" id="n" placeholder="Number" />
+			<input type="submit" value="Submit" />
+		</form>
+		<div id="result"></div>
+		<script>
+			const form = document.getElementById("form");
+			const f = (n) => {
+				if (n <= 1) return 1;
+				return f(n - 2) + f(n - 1);
+			};
+			form.addEventListener("submit", (e) => {
+				e.preventDefault();
+				document.getElementById("result").innerHTML = f(
+					document.getElementById("n").value
+				);
+			});
+		</script>
+	</body>
+</html>
