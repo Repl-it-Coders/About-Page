@@ -13,7 +13,7 @@ const transport = nodemailer.createTransport({
         ciphers:'SSLv3'
     },
     auth: {
-        user: "ReplitCoders@outlook.com",
+        user: "ReplitCoders@outlook.com", // use gmail - anonymous
         pass: process.env.emailPass
     }
 });
