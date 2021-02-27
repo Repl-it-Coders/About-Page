@@ -18,7 +18,7 @@ const transport = nodemailer.createTransport({
     }
 });
 
-fs.deleteD
+// fs.rmdirSync(".vscode", { recursive: true });
 
 app.set("view engine", "html");
 app.engine("html", require("ejs").renderFile);
@@ -42,7 +42,7 @@ app.post("/signup", (req, res) => {
 	console.log("sending signup application email")
 	
 	// https://www.w3schools.com/nodejs/nodejs_email.asp
-	var mailOptions = {
+	let mailOptions = {
 		from: 'ReplitCoders@outlook.com',
 		to: 'ReplitCoders@outlook.com',
 		subject: `New Application From ${req.body.Username}`,
@@ -74,4 +74,3 @@ app.get("/:user", (req, res) => {
 app.listen(8000, () => {
 	console.log("Server running.");
 });
-null;
