@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <title>haha é</title>
+      <link rel="stylesheet" href="//prism.firefish.repl.co/style/main.css"/>
+      <link rel="icon" href="favicon.svg"/>
+   </head>
+   <body>
+   <h1 id="title" style="font-style: italic;" onmousedown="lettergen();"><span class="highl">Firefish!</span></h1>
+    <div class="text">
+      <div id="bio">Hello and welcome! I am firefish, am a NodeJS coder, and I live in England, United Kingdom.
+      My profile picture is a photo of a goldfish I stole from some website, and has since been nicknamed "the Firefish".
+      I don't actually own a goldfish, but I like my profile picture because it is orange, which is my favourite colour. Here is the very famous firefish below:</div><br/>
+      <div id="feish">
+        <img src="//firefish.repl.co/res/firefish.jpg" style="border-radius: 50px;" alt="The famous Firefish"/><br/>
+        ^^ That's Me ^^
+      </div>
+    </div>
+    <script>
+let lettergen = () => {
+  let rn = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; let ls = 0;
+  let pnl = window.setInterval(() => {
+    document.getElementById("title").innerText = `${rn[Math.floor(Math.random() * rn.length)].toUpperCase()}${rn[Math.floor(Math.random() * rn.length)]}${rn[Math.floor(Math.random() * rn.length)]}${rn[Math.floor(Math.random() * rn.length)]}${rn[Math.floor(Math.random() * rn.length)]}${rn[Math.floor(Math.random() * rn.length)]}${rn[Math.floor(Math.random() * rn.length)]}${rn[Math.floor(Math.random() * rn.length)]}!`;
+    ls++;
+    if (ls==16) {
+      document.getElementById("title").innerHTML="<span class=\"highl\">Firefish!</span>";
+      clearInterval(pnl);
+    }
+  }, 60);
+}
+lettergen();
+const goto = page => {
+  if (page == "index") { page = "../index"; }
+  window.location.replace(`https://Firefish-Co--johnstev111.repl.co/pages/${page}.html`)
+}
+    </script>
+   </body>
+</html>

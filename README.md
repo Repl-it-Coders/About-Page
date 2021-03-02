@@ -8,10 +8,9 @@ In the website there is the main page which is the about page for our organizati
 [[https://trello.com/b/cMrZdTcC/about-page]]
 
 ## Status
-Editing : kinda;
-Posted : No;
+Editing : No;
+Posted : Yes;
 Started : Yes;
-Page Contents : Almost Done;
 Portfolios : more than half;
 About Page : Decently Done;
-Sign Up Page : JS done;
+Sign Up Page : JS done but cause of spammies needs work and so commented;
