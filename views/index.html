@@ -10,14 +10,12 @@
   <body>
     <header>
       <h1 class="center">
-        <a class="enlarge" href="https://about-page.whippingdot.repl.co/"
-          >About Us!</a
-        >
+        <a class="enlarge" href="/">About Us!</a>
         <div class="theme-switch-wrapper">
           <label class="theme-switch" for="checkbox">
             <input type="checkbox" id="checkbox" />
             <div class="slider round"></div>
-            <p id="toggle">Dark Mode Toggle</p>
+            <p id="toggle">Light Mode Toggle</p>
           </label>
         </div>
       </h1>
@@ -29,7 +27,7 @@
         function switchTheme(e) {
           document.documentElement.setAttribute(
             "data-theme",
-            e.target.checked ? "dark" : "light"
+            e.target.checked ? "light" : "dark"
           );
         }
 

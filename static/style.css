@@ -24,19 +24,6 @@ font-family: 'Source Code Pro', monospace;
 /* Custom CSS Properties */
 
 :root {
-  --bg-color: #fff4eb;
-  --p-color: #5f3d30;
-  --heading-colors: #472b1c;
-  --link-color: #1ab092;
-  --head-link-color: #a8c7bb;
-  --link-hover: rgba(26, 176, 146, 0.695);
-  --head-link-hover: rgba(168, 199, 187, 0.695);
-  --nav-border: black;
-  --nav-link: #ffa600;
-  --nav-link-hover: rgba(255, 166, 0, 0.695);
-}
-
-[data-theme="dark"] {
   --bg-color: #000b14;
   --p-color: #a0c2cf;
   --heading-colors: #b8d4e3;
@@ -47,6 +34,19 @@ font-family: 'Source Code Pro', monospace;
   --nav-border: white;
   --nav-link: #0059ff;
   --nav-link-hover: rgba(0, 89, 255, 0.695);
+}
+
+[data-theme="light"] {
+  --bg-color: #fff4eb;
+  --p-color: #5f3d30;
+  --heading-colors: #472b1c;
+  --link-color: #1ab092;
+  --head-link-color: #a8c7bb;
+  --link-hover: rgba(26, 176, 146, 0.695);
+  --head-link-hover: rgba(168, 199, 187, 0.695);
+  --nav-border: black;
+  --nav-link: #ffa600;
+  --nav-link-hover: rgba(255, 166, 0, 0.695);
 }
 
 /* HTML TAGS */
