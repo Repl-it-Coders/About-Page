@@ -24,486 +24,485 @@ font-family: 'Source Code Pro', monospace;
 /* Custom CSS Properties */
 
 :root {
-	--bg-color: #fff4eb;
-	--p-color: #5f3d30;
-	--heading-colors: #472b1c;
-	--link-color: #1ab092;
-	--head-link-color: #a8c7bb;
-	--link-hover: rgba(26, 176, 146, 0.695);
-	--head-link-hover: rgba(168, 199, 187, 0.695);
-	--nav-border: black;
-	--nav-link: #ffa600;
-	--nav-link-hover: rgba(255, 166, 0, 0.695);
+  --bg-color: #fff4eb;
+  --p-color: #5f3d30;
+  --heading-colors: #472b1c;
+  --link-color: #1ab092;
+  --head-link-color: #a8c7bb;
+  --link-hover: rgba(26, 176, 146, 0.695);
+  --head-link-hover: rgba(168, 199, 187, 0.695);
+  --nav-border: black;
+  --nav-link: #ffa600;
+  --nav-link-hover: rgba(255, 166, 0, 0.695);
 }
 
 [data-theme="dark"] {
-	--bg-color: #000b14;
-	--p-color: #a0c2cf;
-	--heading-colors: #b8d4e3;
-	--link-color: #e54f6d;
-	--head-link-color: #000dff;
-	--link-hover: rgba(229, 79, 109, 0.694);
-	--head-link-hover: #3a43f5;
-	--nav-border: white;
-	--nav-link: #0059ff;
-	--nav-link-hover: rgba(0, 89, 255, 0.695);
+  --bg-color: #000b14;
+  --p-color: #a0c2cf;
+  --heading-colors: #b8d4e3;
+  --link-color: #e54f6d;
+  --head-link-color: #000dff;
+  --link-hover: rgba(229, 79, 109, 0.694);
+  --head-link-hover: #3a43f5;
+  --nav-border: white;
+  --nav-link: #0059ff;
+  --nav-link-hover: rgba(0, 89, 255, 0.695);
 }
 
 /* HTML TAGS */
 
 html.home,
 html.signup {
-	background-color: var(--bg-color);
-	font-family: "Kanit", sans-serif;
+  background-color: var(--bg-color);
+  font-family: "Kanit", sans-serif;
 }
 
 html.whip {
-	background-color: #3bceac;
-	font-family: "Architects Daughter", cursive;
+  background-color: #3bceac;
+  font-family: "Architects Daughter", cursive;
 }
 html.forofor {
-	color: #edafb8;
-	background-color: rgb(0, 170, 255);
+  color: #edafb8;
+  background-color: rgb(0, 170, 255);
 }
 
 html.codemonkey51 {
-	font-family: "Electrolize", sans-serif;
-	background-color: black;
-	color: white;
+  font-family: "Electrolize", sans-serif;
+  background-color: black;
+  color: white;
 }
 
 html.codemonkey51 p,
 html.codemonkey51 h1 {
-	color: white;
+  color: white;
 }
 
 html.head {
-	font-family: cursive;
-	background-image: "head.png";
+  font-family: cursive;
+  background-image: "head.png";
 }
 html.codingredpanda {
-	background-color: #000b14;
-	color: rgba(200, 255, 0, 0.5);
-	font-feature-settings: "calt";
+  background-color: #000b14;
+  color: rgba(200, 255, 0, 0.5);
+  font-feature-settings: "calt";
 }
 
 html.home h1,
 html.signup h1 {
-	font-size: 60px;
-	color: var(--heading-colors);
+  font-size: 60px;
+  color: var(--heading-colors);
 }
 
 html.home h2,
 html.signup h2 {
-	font-size: 50px;
-	color: var(--heading-colors);
+  font-size: 50px;
+  color: var(--heading-colors);
 }
 
 html.home p,
 html.signup p {
-	font-size: 20px;
-	color: var(--p-color);
+  font-size: 20px;
+  color: var(--p-color);
 }
 
 .center {
-	text-align: center;
+  text-align: center;
 }
 
 .enlarge {
-	font-size: 100%;
+  font-size: 100%;
 }
 .enlarge:hover {
-	font-size: 125%;
+  font-size: 125%;
 }
 
 /* HOME & SIGNUP */
 
 html.home h1 a,
 html.signup h1 a {
-	color: var(--head-link-color);
-	transition: color 200ms, font-size 200ms;
-	font-family: "Permanent Marker", cursive;
+  color: var(--head-link-color);
+  transition: color 200ms, font-size 200ms;
+  font-family: "Permanent Marker", cursive;
 }
 html.home h1 a:hover,
 html.signup h1 a:hover {
-	color: var(--head-link-hover);
+  color: var(--head-link-hover);
 }
 html.home a,
 html.signup a {
-	color: var(--link-color);
+  color: var(--link-color);
   transition: color 200ms;
-	text-decoration: none;
+  text-decoration: none;
 }
 html.home a:hover,
 html.signup a:hover {
-	color: var(--link-hover);
+  color: var(--link-hover);
 }
 
 /* Whippingdot's Section */
 html.whip h1 {
-	font-family: "Walter Turncoat", cursive;
-	font-size: 80px;
-	color: #f24c00;
+  font-family: "Walter Turncoat", cursive;
+  font-size: 80px;
+  color: #f24c00;
 }
 html.whip h2 {
-	font-family: "Walter Turncoat", cursive;
-	font-size: 60px;
-	color: #f24c00;
+  font-family: "Walter Turncoat", cursive;
+  font-size: 60px;
+  color: #f24c00;
 }
 html.whip h3 {
-	font-family: "Walter Turncoat", cursive;
-	font-size: 50px;
-	color: #f24c00;
+  font-family: "Walter Turncoat", cursive;
+  font-size: 50px;
+  color: #f24c00;
 }
 html.whip p {
-	color: #485696;
-	font-size: 23px;
-	font-family: "Architects Daughter", cursive;
+  color: #485696;
+  font-size: 23px;
+  font-family: "Architects Daughter", cursive;
 }
 html.whip a {
-	text-decoration: none;
-	color: #470063;
-	font-family: "Architects Daughter", cursive;
+  text-decoration: none;
+  color: #470063;
+  font-family: "Architects Daughter", cursive;
   transition: color 200ms;
 }
 html.whip a:hover {
-	color: rgba(71, 0, 99, 0.695);
+  color: rgba(71, 0, 99, 0.695);
 }
 html.whip .nolist {
-	list-style: none;
+  list-style: none;
 }
 
 /* Codemonkey51's Section */
 
 html.codemonkey51 a {
-	color: #add8e6;
-	text-decoration: none;
+  color: #add8e6;
+  text-decoration: none;
 }
 
 html.codemonkey51 a:hover {
-	color: rgba(173, 216, 230, 0.695);
+  color: rgba(173, 216, 230, 0.695);
 }
 
 html.codemonkey51 a:visited {
-	color: #b19cd9;
+  color: #b19cd9;
 }
 
 /* ColePete's Section */
 
 html.colepete ul.b {
-	list-style-type: square;
+  list-style-type: square;
 }
 html.colepete {
-	background-color: black;
-	color: rgb(255, 255, 255);
-	font-family: "Reggae One", cursive;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  font-family: "Reggae One", cursive;
 }
 img.yeet {
-	border: 5px solid #d400ff;
+  border: 5px solid #d400ff;
 }
 
-
 html.colepete ul.YEE {
-	width: 500px;
-	text-align: center;
-	margin: auto;
+  width: 500px;
+  text-align: center;
+  margin: auto;
 }
 
 html.colepete ul.YAA {
-	width: 200px;
-	text-align: center;
-	margin: auto;
+  width: 200px;
+  text-align: center;
+  margin: auto;
 }
 
 html.colepete ul.YII {
-	width: 200px;
-	text-align: center;
-	margin: auto;
-	color: #fbff00;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: #fbff00;
 }
 
 html.colepete h2 {
-	font-size: 30px;
-	display: inline-block;
+  font-size: 30px;
+  display: inline-block;
 }
 html.colepete h4 {
-	font-size: 20px;
-	display: inline-block;
+  font-size: 20px;
+  display: inline-block;
 }
 html.colepete h3 {
-	font-size: 25px;
-	display: inline-block;
+  font-size: 25px;
+  display: inline-block;
 }
 html.colepete h1 {
-	font-size: 40px;
-	display: inline-block;
+  font-size: 40px;
+  display: inline-block;
 }
 html.colepete h3.purple {
-	color: #d400ff;
+  color: #d400ff;
 }
 html.colepete h1.purple {
-	color: #d400ff;
+  color: #d400ff;
 }
 html.colepete a {
-	color: rgb(43, 255, 0);
+  color: rgb(43, 255, 0);
 }
 html.colepete a:hover {
-	color: rgb(163, 255, 163);
+  color: rgb(163, 255, 163);
 }
 html.colepete a.blue {
-	color: #00d9ff;
+  color: #00d9ff;
 }
 html.colepete a:hover.blue {
-	color: #ccf7ff;
+  color: #ccf7ff;
 }
 html.colepete h1.yellow {
-	color: #fbff00;
+  color: #fbff00;
 }
 html.colepete h1.blue {
-	color: #00d9ff;
+  color: #00d9ff;
 }
 html.colepete h4.blue {
-	color: #00d9ff;
+  color: #00d9ff;
 }
 
 html.colepete h1.green {
-	color: rgb(43, 255, 0);
+  color: rgb(43, 255, 0);
 }
 html.colepete h1.red {
-	color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
 }
 html.colepete h2.red {
-	color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
 }
 html.colepete a.red {
-	color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
 }
 html.colepete a:hover.red {
-	color: rgb(255, 156, 156);
+  color: rgb(255, 156, 156);
 }
 html.colepete h1.orange {
-	color: #ff9100;
+  color: #ff9100;
 }
 html.colepete h2.orange {
-	color: #ff9100;
+  color: #ff9100;
 }
 html.colepete a.orange {
-	color: #ff9100;
+  color: #ff9100;
 }
 html.colepete a:hover.orange {
-	color: #ffbf6a;
+  color: #ffbf6a;
 }
 /* Sign Up Page */
 html.signup button {
-	padding: 10px;
-	border-radius: 7px;
-	background-color: #331832;
-	color: #e54f6d;
-	border: none;
-	cursor: pointer;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #331832;
+  color: #e54f6d;
+  border: none;
+  cursor: pointer;
 }
 html.signup input {
-	background-color: #c8dde5;
-	color: #344055;
-	padding: 8px;
-	border-radius: 5px;
+  background-color: #c8dde5;
+  color: #344055;
+  padding: 8px;
+  border-radius: 5px;
 }
 html.signup label {
-	cursor: text;
-	color: #5c96ad;
+  cursor: text;
+  color: #5c96ad;
 }
 
 /* CodingRedpanda's Section */
 
 html.codingredpanda a {
-	color: #ff7300;
-	text-decoration: none;
+  color: #ff7300;
+  text-decoration: none;
 }
 html.codingredpanda a:hover {
-	color: rgba(255, 145, 0, 0.695);
+  color: rgba(255, 145, 0, 0.695);
 }
 html.codingredpanda a:visited {
-	color: rgba(200, 255, 0, 0.5);
+  color: rgba(200, 255, 0, 0.5);
 }
 html.codingredpanda h1 {
-	font-size: 60px;
-	color: #b8d4e3;
-	float: left;
-	font-family: "Fira Code", monospace;
+  font-size: 60px;
+  color: #b8d4e3;
+  float: left;
+  font-family: "Fira Code", monospace;
 }
 html.codingredpanda h1[class="o"] {
-	color: #b8d4e3;
+  color: #b8d4e3;
 }
 html.codingredpanda h2 {
-	font-size: 50px;
-	color: #b8d4e3;
-	font-family: "Fira Code", monospace;
+  font-size: 50px;
+  color: #b8d4e3;
+  font-family: "Fira Code", monospace;
 }
 html.home h1 a.shhh {
-	cursor: text;
-	text-decoration: none;
-	color: var(--heading-colors);
-	font-family: "Kanit", sans-serif;
+  cursor: text;
+  text-decoration: none;
+  color: var(--heading-colors);
+  font-family: "Kanit", sans-serif;
 }
 html.home h1 a.shhh:hover {
-	color: var(--heading-colors);
+  color: var(--heading-colors);
 }
 html.codingredpanda h3 {
-	color: #b8d4e3;
-	font-family: "Fira Code", monospace;
+  color: #b8d4e3;
+  font-family: "Fira Code", monospace;
 }
 html.codingredpanda p {
-	font-size: 20px;
-	font-family: "Fira Code", monospace;
-	float: inline-end;
+  font-size: 20px;
+  font-family: "Fira Code", monospace;
+  float: inline-end;
 }
 
 /* Isaiah08's section */
 
 html.isaiah body {
-	background-color: black;
-	color: white;
-	font-family: "Source Code Pro", monospace;
+  background-color: black;
+  color: white;
+  font-family: "Source Code Pro", monospace;
 }
 
 html.isaiah a:visited,
 a:link {
-	color: red;
-	text-decoration: none;
+  color: red;
+  text-decoration: none;
 }
 
 html.isaiah a.text {
-	color: white;
+  color: white;
 }
 
 html.isaiah point {
-	color: rgb(12, 255, 12);
+  color: rgb(12, 255, 12);
 }
 
 /*JB's section */
 
 html.JB body {
-	background-color: #000b14;
-	color: #000dff;
-	font-family: cursive;
+  background-color: #000b14;
+  color: #000dff;
+  font-family: cursive;
 }
 
 html.JB a:visited {
-	color: #0059ff;
+  color: #0059ff;
 }
 /* Dark Mode */
 
 .theme-switch-wrapper {
-	padding-right: 5%;
-	display: flex;
-	align-items: center;
-	float: right;
+  padding-right: 5%;
+  display: flex;
+  align-items: center;
+  float: right;
 }
 
 .theme-switch {
-	display: inline-block;
-	height: 34px;
-	position: relative;
-	width: 60px;
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
 }
 
 .theme-switch input {
-	display: none;
+  display: none;
 }
 
 .slider {
-	background-color: #ccc;
-	bottom: 0;
-	cursor: pointer;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	transition: 0.4s;
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
 }
 
 .slider:before {
-	background-color: #fff;
-	bottom: 4px;
-	content: "";
-	height: 26px;
-	left: 4px;
-	position: absolute;
-	transition: 0.4s;
-	width: 26px;
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
 }
 
 input:checked + .slider {
-	background-color: #66bb6a;
+  background-color: #66bb6a;
 }
 
 input:checked + .slider:before {
-	transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 .slider.round {
-	border-radius: 34px;
+  border-radius: 34px;
 }
 
 .slider.round:before {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 p#toggle {
-	padding-top: 15px;
-	cursor: pointer;
+  padding-top: 15px;
+  cursor: pointer;
 }
 
 /* Header ~~ Codemonkey51 */
 
 #navbar li {
-	list-style-type: none;
-	display: inline;
-	/* float: left; */
-	padding-right: 20px;
+  list-style-type: none;
+  display: inline;
+  /* float: left; */
+  padding-right: 20px;
 }
 
 #navbar {
-	border: 1px solid var(--nav-border);
-	padding: 20px;
-	display: inline-block;
+  border: 1px solid var(--nav-border);
+  padding: 20px;
+  display: inline-block;
 }
 
 #navbar a {
-	color: var(--nav-link);
-	font-size: 25px;
+  color: var(--nav-link);
+  font-size: 25px;
   transition: color 200ms;
 }
 #navbar a:hover {
-	color: var(--nav-link-hover);
+  color: var(--nav-link-hover);
 }
 
 /* Darkdarcool's section */
 
 html.darkdarcool .App {
-	text-align: center;
+  text-align: center;
 }
 
 html.darkdarcool .App-logo {
-	height: 40vmin;
-	pointer-events: none;
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-	html.darkdarcool .App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
+  html.darkdarcool .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 html.darkdarcool .App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 /*
@@ -511,56 +510,56 @@ html.darkdarcool .App-header {
 */
 html.darkdarcool .button,
 button {
-	display: inline-block;
-	padding: 8px 18px;
-	background: #1d51b1;
-	box-shadow: 0px 4px 0px #0f2e81;
-	border-radius: 6px;
-	color: white;
-	text-decoration: none;
-	line-height: 100%;
-	border: 0;
-	cursor: pointer;
-	font-family: inherit;
-	font-size: inherit;
-	transition-property: transform, box-shadow;
-	transition-duration: 120ms;
+  display: inline-block;
+  padding: 8px 18px;
+  background: #1d51b1;
+  box-shadow: 0px 4px 0px #0f2e81;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  line-height: 100%;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  transition-property: transform, box-shadow;
+  transition-duration: 120ms;
 }
 
 html.darkdarcool select {
-	display: inline-block;
-	padding: 8px 18px;
-	padding-right: 30px;
-	-webkit-appearance: none;
-	background: #3d3d3d
-		url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E")
-		calc(100% - 18px) 50% / 12px no-repeat;
-	box-shadow: 0px 4px 0px #252525;
-	border-radius: 6px;
-	color: white;
-	line-height: 100%;
-	border: 0;
-	cursor: pointer;
-	font-family: inherit;
-	font-size: inherit;
+  display: inline-block;
+  padding: 8px 18px;
+  padding-right: 30px;
+  -webkit-appearance: none;
+  background: #3d3d3d
+    url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E")
+    calc(100% - 18px) 50% / 12px no-repeat;
+  box-shadow: 0px 4px 0px #252525;
+  border-radius: 6px;
+  color: white;
+  line-height: 100%;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 html.darkdarcool select::-ms-expand {
-	display: none;
+  display: none;
 }
 
 html.darkdarcool .button:active,
 button:active,
 .ql-active {
-	box-shadow: none;
-	transform: translateY(4px);
+  box-shadow: none;
+  transform: translateY(4px);
 }
 html.darkdarcool @font-face {
-	font-family: "Inter var experimental";
-	font-weight: 100 900;
-	font-style: oblique 0 10deg;
-	font-display: swap;
-	src: url(//rsms.me/inter/font-files/Inter.var.woff2?v=3.11) format("woff2");
+  font-family: "Inter var experimental";
+  font-weight: 100 900;
+  font-style: oblique 0 10deg;
+  font-display: swap;
+  src: url(//rsms.me/inter/font-files/Inter.var.woff2?v=3.11) format("woff2");
 }
 
 html.darkdarcool button,
@@ -568,40 +567,40 @@ a,
 input,
 [contenteditable],
 select {
-	outline: shadow;
-	/* Bad accessibility so reminder to add a shadow outline l8r */
+  outline: shadow;
+  /* Bad accessibility so reminder to add a shadow outline l8r */
 }
 
 html.darkdarcool body {
-	font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI",
-		"Roboto", "Lato", "Helvetica", "Arial", sans-serif;
-	background: #1a1c1e;
-	color: white;
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 60px 10px;
-	clear: both;
+  font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI",
+    "Roboto", "Lato", "Helvetica", "Arial", sans-serif;
+  background: #1a1c1e;
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 10px;
+  clear: both;
 }
 html.darkdarcool #wrapper {
-	clear: both;
+  clear: both;
 }
 html.darkdarcool input:not(#imageSelect),
 [contenteditable] {
-	color: white;
-	background: #1a1c1e;
-	border-radius: 6px;
-	border: 1px solid #212428;
-	padding: 10px;
+  color: white;
+  background: #1a1c1e;
+  border-radius: 6px;
+  border: 1px solid #212428;
+  padding: 10px;
 }
 
 html.darkdarcool a {
-	text-decoration: none;
-	color: #3aa6f3;
-	/*   display: inline-block */
+  text-decoration: none;
+  color: #3aa6f3;
+  /*   display: inline-block */
 }
 
 html.darkdarcool a:not(.button):not(button):not(.entry):hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* keep these at the bottom because they ruin replit syntax highlighting */
@@ -610,21 +609,21 @@ html.darkdarcool a[href*="//discord.gg"], a[href*="//repl.it/discord"], a[href*=
 
 html.darkdarcool a[href*="//repl.it/discord"]::before, a[href*="//discord.gg"]::before, a[href*="//twitter.com"]::before, a[href*="//discordapp.com"]::before
 {
-	content: " ";
-	background-size: contain;
-	width: 1.25em;
-	height: 1.25em;
-	position: relative;
-	display: inline-block;
-	top: 0.25em;
-	margin-top: -0.5em;
+  content: " ";
+  background-size: contain;
+  width: 1.25em;
+  height: 1.25em;
+  position: relative;
+  display: inline-block;
+  top: 0.25em;
+  margin-top: -0.5em;
 }
 html.darkdarcool a[href*="//discord.gg"]::before, a[href*="//repl.it/discord"]::before, a[href*="//discordapp.com"]::before
 {
-	background-image: url(/static/discord-logo-white.png);
+  background-image: url(/static/discord-logo-white.png);
 }
 
 html.darkdarcool a[href*="//twitter.com"]::before
 {
-	background-image: url(/static/twitter-logo-blue.png);
+  background-image: url(/static/twitter-logo-blue.png);
 }
