@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en" class="home">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>About Us!</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-	<body>
-		<header>
-			<h1 class="center">
-				<a class="enlarge" href="https://about-page.whippingdot.repl.co/"
-					>About Us!</a
-				>
-				<div class="theme-switch-wrapper">
-					<label class="theme-switch" for="checkbox">
-						<input type="checkbox" id="checkbox" />
-						<div class="slider round"></div>
-						<p id="toggle">Dark Mode Toggle</p>
-					</label>
-				</div>
-			</h1>
-			<script>
-				const toggleSwitch = document.querySelector(
-					'.theme-switch input[type="checkbox"]'
-				);
+  <body>
+    <header>
+      <h1 class="center">
+        <a class="enlarge" href="/">About Us!</a>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+            <p id="toggle">Light Mode Toggle</p>
+          </label>
+        </div>
+      </h1>
+      <script>
+        const toggleSwitch = document.querySelector(
+          '.theme-switch input[type="checkbox"]'
+        );
 
-				function switchTheme(e) {
-					document.documentElement.setAttribute("data-theme", e.target.checked ? "dark" : "light");
-				}
+        function switchTheme(e) {
+          document.documentElement.setAttribute(
+            "data-theme",
+            e.target.checked ? "light" : "dark"
+          );
+        }
 
-				toggleSwitch.addEventListener("change", switchTheme, false);
-			</script>
-			<ul id="navbar">
-				<li><a href="/BD103">BD103's Portfolio</a></li>
-				<li><a href="/ch1ck3n">ch1ck3n's Portfolio</a></li>
-				<li><a href="/Codemonkey51">Codemonkey51's Portfolio</a></li>
-				<li><a href="/CodingRedpanda">CodingRedpanda's Portfolio</a></li>
-				<li><a href="/ColePete">ColePete's Portfolio</a></li>
-				<li><a href="/darkdarcool">darkdarcool's Portfolio</a></li>
-				<li><a href="/elipie">elipie's Portfolio</a></li>
-				<li><a href="/EpicRaisin">EpicRaisin's Portfolio</a></li>
-				<li><a href="/firefish">firefish's Portfolio</a></li>
-				<li><a href="/forer">forer's Portfolio</a></li>
-				<li><a href="/headiscoding">headiscoding's Portfolio</a></li>
-				<li><a href="/isaiah08">isaiah08's Portfolio</a></li>
-				<li><a href="/JBloves27">JBloves27's Portfolio</a></li>
-				<li><a href="/programmeruser">programmeruser's Portfolio</a></li>
-				<li><a href="/whippingdot">whippingdot's Portfolio</a></li>
-				<li><a href="/zplusfour">zplusfour's Portfolio</a></li>
-			</ul>
-			<div class="center">
-				<ul id="navbar">
-					<li><a href="/signup#signupform">Sign Up!</a></li>
-				</ul>
-			</div>
-			<br />
-		</header>
-		<h1 class="center">Hoi ther<a class="shhh" href="/secret">e</a>!</h1>
-		<p>
-			I(<a href="https://repl.it/@Whippingdot">Whippingdot</a>) created this
-			organization because I wanted to have an organization for us coders who
-			use Repl.it. I wanted to create cool project with the fellow members
-			without having to comment on random posts that I saw on repl talk. I also
-			wanted to create project <strong>for</strong> Repl.it too without having
-			to reveal the plan by commenting. The community here is fun and we always
-			have chats with anyone. If you have a question on one of our projects, you
-			can ask in an issue or disccusion and we will help.
-		</p>
+        toggleSwitch.addEventListener("change", switchTheme, false);
+      </script>
+      <ul id="navbar">
+        <li><a href="/BD103">BD103's Portfolio</a></li>
+        <li><a href="/ch1ck3n">ch1ck3n's Portfolio</a></li>
+        <li><a href="/Codemonkey51">Codemonkey51's Portfolio</a></li>
+        <li><a href="/CodingRedpanda">CodingRedpanda's Portfolio</a></li>
+        <li><a href="/ColePete">ColePete's Portfolio</a></li>
+        <li><a href="/darkdarcool">darkdarcool's Portfolio</a></li>
+        <li><a href="/elipie">elipie's Portfolio</a></li>
+        <li><a href="/EpicRaisin">EpicRaisin's Portfolio</a></li>
+        <li><a href="/firefish">firefish's Portfolio</a></li>
+        <li><a href="/forer">forer's Portfolio</a></li>
+        <li><a href="/headiscoding">headiscoding's Portfolio</a></li>
+        <li><a href="/isaiah08">isaiah08's Portfolio</a></li>
+        <li><a href="/JBloves27">JBloves27's Portfolio</a></li>
+        <li><a href="/programmeruser">programmeruser's Portfolio</a></li>
+        <li><a href="/whippingdot">whippingdot's Portfolio</a></li>
+        <li><a href="/zplusfour">zplusfour's Portfolio</a></li>
+      </ul>
+      <div class="center">
+        <ul id="navbar">
+          <li><a href="/signup#signupform">Sign Up!</a></li>
+        </ul>
+      </div>
+      <br />
+    </header>
+    <h1 class="center">Hoi ther<a class="shhh" href="/secret">e</a>!</h1>
+    <p>
+      I(<a href="https://repl.it/@Whippingdot">Whippingdot</a>) created this
+      organization because I wanted to have an organization for us coders who
+      use Repl.it. I wanted to create cool project with the fellow members
+      without having to comment on random posts that I saw on repl talk. I also
+      wanted to create project <strong>for</strong> Repl.it too without having
+      to reveal the plan by commenting. The community here is fun and we always
+      have chats with anyone. If you have a question on one of our projects, you
+      can ask in an issue or disccusion and we will help.
+    </p>
 
-		<h2 class="center">Joining</h2>
-		<p>
-			This organization is free to repl.it members, and you can give a message
-			to use that you want to join in just a click of a few buttons in our
-			<a href="/signup"
-				>Sign up page where you give us your repl.it profile link and your
-				github profile link</a
-			>. I recommend having a few months prior experience to GitHub though so
-			you know how to use it. We have projects regularly and I think we finish
-			around 3/4 project per year. The community will be very active, and even I
-			will be active. You can always ping me on GitHub or repl.it and I will be
-			free to help!
-		</p>
+    <h2 class="center">Joining</h2>
+    <p>
+      This organization is free to repl.it members, and you can give a message
+      to use that you want to join in just a click of a few buttons in our
+      <a href="/signup"
+        >Sign up page where you give us your repl.it profile link and your
+        github profile link</a
+      >. I recommend having a few months prior experience to GitHub though so
+      you know how to use it. We have projects regularly and I think we finish
+      around 3/4 project per year. The community will be very active, and even I
+      will be active. You can always ping me on GitHub or repl.it and I will be
+      free to help!
+    </p>
     <h6 class="center"><a href="/haha-e">l'é</a></h6>
-	</body>
+  </body>
 </html>
