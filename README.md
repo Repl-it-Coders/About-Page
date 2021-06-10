@@ -4,8 +4,7 @@ This is our about page. If you see any spelling mistakes feel free to point them
 ## Website
 In the website there is the main page which is the about page for our organization. It gives the reason why we made it and things like that. This website also has 'portfolios' or 'pages' for each of our organization members. The members are _supposed to_ make their own CSS and stuff but some of them are lazy and...you see the result. Hope you like it, BAI!!
 
-## Trello
-[Trello link](https://trello.com/b/cMrZdTcC/about-page)
+## [View us on Trello!](https://trello.com/b/cMrZdTcC/about-page)
 
 ## Status
 Editing : No;
