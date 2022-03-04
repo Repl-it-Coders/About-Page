@@ -45,7 +45,7 @@ app.get("/signup", (_, res) => {
 
 const ips = {};
 app.post("/signup", signupLimit, (req, res) => {
-  //res.send("due to spam signup is currently dissabled.")
+  //res.send("due to spam signup is currently disabled.")
   //return
   const current = Date.now();
   const ip = req.ip;
@@ -60,7 +60,7 @@ app.post("/signup", signupLimit, (req, res) => {
     return res
       .status(429)
       .send(
-        "We recieved multiple requests from you in under a second. Please wait a while before submitting new requests."
+        "We received multiple requests from you in under a second. Please wait a while before submitting new requests."
       ); // read chat.
   }
   console.log("sending signup application email");
